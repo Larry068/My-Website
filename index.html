@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eng. Lawrence Kiminja, PE | Altrucs Structural Design</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f4f8',
+                            900: '#0f172a',
+                            gold: '#d4af37',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 1. NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-slate-900 tracking-tight">
+                        Lawrence Kiminja, <span class="text-brand-gold font-semibold">PE</span>
+                    </a>
+                    <span class="hidden sm:inline-block text-xs text-slate-500 block -mt-1">Altrucs Structural Design</span>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                    <a href="#" class="hover:text-slate-900 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
+                    <a href="#portfolio" class="hover:text-slate-900 transition-colors">Portfolio</a>
+                    <a href="#services" class="hover:text-slate-900 transition-colors">Services</a>
+                    <a href="#siteplann" class="hover:text-slate-900 transition-colors">SitePlann</a>
+                    <a href="#contact" class="bg-slate-900 text-white px-4 py-2 rounded-md hover:bg-slate-800 transition-colors -mt-1">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Home</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">About</a>
+            <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Portfolio</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">Services</a>
+            <a href="#siteplann" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100">SitePlann</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-slate-900 text-white text-center">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <header class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-100 to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-200/80 text-slate-800 border border-slate-300">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span> Open for Infrastructure & Engineering Advisory
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-none">
+                    Engineering Resilient Infrastructure. <br class="hidden lg:inline">Delivering Structural Excellence.
+                </h1>
+                <p class="text-lg text-slate-600 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                    Professional Civil Engineer (PE) specializing in rigorous code-based modeling, foundation engineering, and infrastructure advisory frameworks across East Africa.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#portfolio" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-slate-900 hover:bg-slate-800 transition-colors">
+                        View Portfolio
+                    </a>
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 shadow-sm transition-colors">
+                        Discuss a Project
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
+                    <!-- verifiably linking requested avatar -->
+                    <img src="WhatsApp Image 2024-07-03 at 1.06.09 PM (1).jpg" alt="Eng. Lawrence Kiminja, PE" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. ABOUT ME SECTION -->
+    <section id="about" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                    Bridging Technical Precision with Infrastructure Vision
+                </h2>
+                <div class="h-1 w-20 bg-slate-900 mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="md:col-span-2 space-y-6 text-slate-600 text-lg leading-relaxed">
+                    <p>
+                        As a registered Professional Engineer in Kenya and a PMP-certified project manager, I blend deep technical engineering mechanics with structural design optimization strategies. From manual static load verifications to multi-layered execution modeling, safety remains the driving pillar of my work.
+                    </p>
+                    <p>
+                        My background scales smoothly between ground infrastructure asset sizing and corporate delivery frameworks. Whether designing heavy foundations or managing multi-tier residential builds under Altrucs Structural Design, my systems assure maximum durability and optimization.
+                    </p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 space-y-4 shadow-sm">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Key Credentials</h3>
+                    <ul class="space-y-3 font-medium text-slate-700 text-sm">
+                        <li class="flex items-start"><i class="fa-solid fa-id-card text-slate-900 mt-1 mr-3 w-4 text-center"></i> Registered Professional Engineer (PE), EBK</li>
+                        <li class="flex items-start"><i class="fa-solid fa-award text-slate-900 mt-1 mr-3 w-4 text-center"></i> PMP® Certified Project Manager</li>
+                        <li class="flex items-start"><i class="fa-solid fa-book-bookmark text-slate-900 mt-1 mr-3 w-4 text-center"></i> Eurocodes (EC3) & BS 8110 Expert</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURED PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                    Featured Portfolio: Altrucs Structural Design
+                </h2>
+                <p class="text-slate-500 mt-2">A showcase of modern structural design engineering executed across Kenya.</p>
+                <div class="h-1 w-20 bg-slate-900 mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:shadow-md transition-shadow">
+                    <div class="h-64 sm:h-80 bg-slate-100 overflow-hidden relative">
+                        <img src="5-bedroom-villa-syokimau (1).jpg" alt="5-Bedroom Luxury Villa, Syokimau" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Residential Project</span>
+                        <h3 class="text-xl font-bold text-slate-900">5-Bedroom Luxury Villa, Syokimau</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Modern residential structural design showcasing long-span spatial layouts, reinforced concrete two-way slab optimizations, and meticulous static load distribution tracks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:shadow-md transition-shadow">
+                    <div class="h-64 sm:h-80 bg-slate-100 overflow-hidden relative">
+                        <img src="commercial-development-along-parliament-road-syokimau-1.jpg" alt="Commercial Development, Syokimau" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Commercial & Mixed-Use</span>
+                        <h3 class="text-xl font-bold text-slate-900">Commercial Development, Parliament Road</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Multi-story infrastructure detailing incorporating high-load capacity commercial retail zones at ground line and adaptive framing systems designed for structural stability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES SECTION -->
+    <section id="services" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+                    Core Engineering Engineering Capabilities
+                </h2>
+                <div class="h-1 w-20 bg-slate-900 mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-6 space-y-4 border border-slate-100 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Structural Analysis & Design</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Precision engineering of multi-tier reinforced frames, industrial portals, complex foundations, and structural members validated directly against Eurocode 3 and BS 8110 safety margins.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-6 space-y-4 border border-slate-100 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Geotechnical Foundation Integration</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Translating localized laboratory soil parameters (dry density, internal shear angle, and field cohesion profile) into robust footing optimizations that guarantee bearing integrity.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="p-6 space-y-4 border border-slate-100 rounded-xl hover:bg-slate-50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Project Controls & Infrastructure Advisory</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Injecting solid PMP methodologies across active site assets, managing resource tracking, materials variance reporting, and operational infrastructure delivery setups.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. INNOVATION SPOTLIGHT: SITEPLANN -->
+    <section id="siteplann" class="py-20 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white uppercase tracking-widest">SaaS Innovation</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                SitePlann: Digitizing Construction Site Management
+            </h2>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                As a software engineer and civil contractor, I am building **SitePlann**—a tailored, digital repository and management tool built explicitly for site engineers to manage logs, project variables, and design documents on-site with real-time accessibility.
+            </p>
+            <div class="pt-4">
+                <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-md text-base font-medium text-slate-900 bg-white hover:bg-slate-100 transition-colors shadow-lg">
+                    Request Early Access <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Let's Build Something Safe and Sustainable Together
+                </h2>
+                <p class="text-slate-500 mt-2">Reach out directly for structural consultation, calculation validation, or framework audit advisory.</p>
+                <div class="h-1 w-20 bg-slate-900 mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-10">
+                <form action="#" method="POST" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-slate-700">Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-slate-900 focus:border-slate-900 text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-slate-700">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-slate-900 focus:border-slate-900 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="project-type" class="block text-sm font-semibold text-slate-700">Project Type</label>
+                        <select id="project-type" name="project-type" class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-slate-900 focus:border-slate-900 text-sm bg-white">
+                            <option>Residential Structural Design</option>
+                            <option>Commercial Development Analysis</option>
+                            <option>Infrastructure/PPP Advisory Framework</option>
+                            <option>SitePlann Early Access Request</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-slate-700">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-slate-300 rounded-md shadow-sm focus:ring-slate-900 focus:border-slate-900 text-sm"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-slate-900 hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                            Send Structural Brief
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-white font-semibold">Eng. Lawrence Kiminja, PE</p>
+            <p class="text-sm">Registered Professional Civil Engineer, Engineers Board of Kenya (EBK)</p>
+            <div class="flex justify-center space-x-6 text-lg">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="text-xs text-slate-500 pt-4 border-t border-slate-800/60 max-w-xs mx-auto">
+                &copy; 2026 Eng. Lawrence Kiminja. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Toggle mobile responsive navigation menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when any item inside is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Basic Client Form Submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Thank you for your submission, Eng. Lawrence will get back to you shortly regarding your design parameters.");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
