@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawrence Kiminja | Civil Engineer & Structural Designer</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,7 +21,6 @@
             }
         }
     </script>
-    <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -33,10 +31,8 @@
 </head>
 <body class="bg-[#090D16] text-slate-300 antialiased selection:bg-sky-500 selection:text-white">
 
-    <!-- Subtle Tech Grid Background Pattern -->
     <div class="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
-    <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 w-full bg-[#090D16]/80 backdrop-blur-md border-b border-[#1E293B] z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div>
@@ -55,7 +51,6 @@
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-white"><i class="fa-solid fa-bars text-xl"></i></button>
         </div>
-        <!-- Mobile Nav -->
         <div id="mobile-menu" class="hidden bg-[#090D16] border-b border-[#1E293B] p-6 space-y-3">
             <a href="#" class="block text-sm text-slate-400">Home</a>
             <a href="#about" class="block text-sm text-slate-400">About</a>
@@ -66,7 +61,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="pt-40 pb-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-16 items-center">
             <div class="md:col-span-7 space-y-6 text-left">
@@ -92,7 +86,6 @@
         </div>
     </header>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 border-t border-[#1E293B]">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
@@ -110,212 +103,42 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO CARDS SECTION (DRIBBBLE FINPAY INSPIRED) -->
     <section id="portfolio" class="py-24 border-t border-[#1E293B] bg-[#0c121e]/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
                 <div>
-                    <h2 class="text-3xl font-extrabold text-white tracking-tight">Engineering Records Portfolio</h2>
-                    <p class="text-slate-500 text-sm mt-1">Use the layout toggle arrows embedded inside each display element card.</p>
+                    <h2 class="text-3xl font-extrabold text-white tracking-tight">Engineering Projects Portfolio</h2>
+                    <p class="text-slate-500 text-sm mt-1">Use the layout toggle arrows embedded inside each display card element.</p>
                 </div>
             </div>
 
-            <!-- Finpay Minimalist Grid Layout -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- CARD 1: ALTRUCS PROJECT -->
                 <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="altrucs">
-                        <img src="ALTRUCS_PROJECT/5-bedroom-villa-syokimau (1).jpg" class="slider-img active w-full h-full object-cover" alt="5-Bedroom Villa Layout">
-                        <img src="ALTRUCS_PROJECT/commercial-development-along-parliament-road-syokimau-1.jpg" class="slider-img w-full h-full object-cover" alt="Commercial Development Profile">
+                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="altrucs-design">
+                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/5-bedroom-villa-syokimau (1).jpg" class="slider-img active w-full h-full object-cover" alt="5-Bedroom Villa Syokimau">
+                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/5-bedroom-villa-in-meru (1).jpg" class="slider-img w-full h-full object-cover" alt="5-Bedroom Villa Meru">
+                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/7-bedroom-syokimau-87 (1).jpg" class="slider-img w-full h-full object-cover" alt="7-Bedroom Syokimau">
+                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/commercial-development-along-parliament-road-syokimau-1.jpg" class="slider-img w-full h-full object-cover" alt="Commercial Syokimau">
+                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/kisumu-residence1.jpg" class="slider-img w-full h-full object-cover" alt="Kisumu Residence">
                         
-                        <button onclick="changeSlide('altrucs', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full shadow flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('altrucs', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full shadow flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                        <button onclick="changeSlide('altrucs-design', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full shadow flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button onclick="changeSlide('altrucs-design', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full shadow flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Altrucs Designs</div>
-                        <h3 class="text-lg font-bold text-white">Residential & Commercial Frameworks</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Structural configuration and element sizing analytics matching continuous residential spatial footprints and retail ground profiles.</p>
+                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Design Asset Modeling</div>
+                        <h3 class="text-lg font-bold text-white">Altrucs Structural Portfolio</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Structural element detailing and layout profiles for premium multi-story residential villas and modern commercial layouts.</p>
                     </div>
                 </div>
 
-                <!-- CARD 2: APPRAISAL PROJECTS -->
                 <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="appraisal">
-                        <img src="Appraisal_Projects/image1.jpg" class="slider-img active w-full h-full object-cover" alt="Appraisal 1" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600'">
-                        <img src="Appraisal_Projects/image2.jpg" class="slider-img w-full h-full object-cover" alt="Appraisal 2" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600'">
+                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="appraisal-design">
+                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.54 PM.jpeg" class="slider-img active w-full h-full object-cover" alt="Appraisal Grid Details">
+                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.56 PM.jpeg" class="slider-img w-full h-full object-cover" alt="Appraisal Load Path Check">
+                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.57 PM (1).jpeg" class="slider-img w-full h-full object-cover" alt="Appraisal Column Detailing">
+                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.57 PM (2).jpeg" class="slider-img w-full h-full object-cover" alt="Appraisal Reinforcement Layout">
+                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.57 PM.jpg" class="slider-img w-full h-full object-cover" alt="Appraisal Structural Elevation">
                         
-                        <button onclick="changeSlide('appraisal', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('appraisal', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-                    </div>
-                    <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Audits</div>
-                        <h3 class="text-lg font-bold text-white">Infrastructure Integrity Appraisals</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Condition modeling, safety load evaluations, and diagnostic analytics reviewing localized reinforcement frameworks.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 3: BOTSWANA PROJECT -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="botswana">
-                        <img src="BOTSWANA_PROJECT/image1.jpg" class="slider-img active w-full h-full object-cover" alt="Botswana 1" onerror="this.src='https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=600'">
-                        
-                        <button onclick="changeSlide('botswana', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('botswana', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-                    </div>
-                    <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Regional</div>
-                        <h3 class="text-lg font-bold text-white">Botswana Infrastructure Scope</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Cross-border framing calculations tailored to regional subgrade parameters and loading guidelines.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 4: KPC PROJECT -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="kpc">
-                        <img src="KPC_PROJECT/image1.jpg" class="slider-img active w-full h-full object-cover" alt="KPC 1" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600'">
-                        
-                        <button onclick="changeSlide('kpc', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('kpc', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-                    </div>
-                    <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Industrial</div>
-                        <h3 class="text-lg font-bold text-white">KPC Structural Analytics</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">High-load configuration reviews requiring meticulous component mapping and structural stability stress limits testing.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 5: NYORO -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="nyoro">
-                        <img src="NYORO/image1.jpg" class="slider-img active w-full h-full object-cover" alt="Nyoro" onerror="this.src='https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=600'">
-                        
-                        <button onclick="changeSlide('nyoro', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('nyoro', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-                    </div>
-                    <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Developments</div>
-                        <h3 class="text-lg font-bold text-white">Nyoro Infrastructure Layout</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Elevation modeling, spatial balancing, and element orientation configuration for localized residential builds.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- CORE SERVICES -->
-    <section id="services" class="py-24 border-t border-[#1E293B]">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-2xl font-bold text-white mb-12">Engineering Scope Focus</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#121824]/40 border border-[#1E293B] p-6 rounded-xl space-y-3">
-                    <div class="text-sky-400 text-lg"><i class="fa-solid fa-calculator"></i></div>
-                    <h3 class="text-base font-bold text-white">Structural Analysis</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Rigorous checks against BS 8110 and Eurocode standards covering multi-story steel framing configurations.</p>
-                </div>
-                <div class="bg-[#121824]/40 border border-[#1E293B] p-6 rounded-xl space-y-3">
-                    <div class="text-sky-400 text-lg"><i class="fa-solid fa-trowel-bricks"></i></div>
-                    <h3 class="text-base font-bold text-white">Foundation Mechanics</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Converting soil load parameters seamlessly into sound, highly cost-optimized footing systems.</p>
-                </div>
-                <div class="bg-[#121824]/40 border border-[#1E293B] p-6 rounded-xl space-y-3">
-                    <div class="text-sky-400 text-lg"><i class="fa-solid fa-diagram-project"></i></div>
-                    <h3 class="text-base font-bold text-white">Project Controls</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Setting up detailed site logs, monitoring variances, and tracking asset timelines cleanly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SITEPLANN SAAS PRODUCT SPOTLIGHT -->
-    <section id="siteplann" class="py-24 border-y border-[#1E293B] bg-gradient-to-r from-[#090D16] to-[#121824]">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
-            <div class="text-xs font-bold text-sky-400 uppercase tracking-widest">Proprietary Software Integration</div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">SitePlann: Digital Site Tracking</h2>
-            <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
-                I am actively developing **SitePlann**—a modern digital repository system engineered specifically to store, update, and manage layout changes and logs straight from active construction sites.
-            </p>
-            <div class="pt-2">
-                <a href="#contact" class="bg-white text-black font-bold text-xs px-5 py-3 rounded-full hover:bg-slate-200 transition-all">Request Product Parameters</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT FORM -->
-    <section id="contact" class="py-24 bg-[#090D16]">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center space-y-2 mb-12">
-                <h2 class="text-2xl font-bold text-white">Initiate a Design Brief</h2>
-                <p class="text-xs text-slate-500">Provide baseline details below to open parameters tracking evaluation.</p>
-            </div>
-            <form class="space-y-6 bg-[#121824] border border-[#1E293B] p-6 sm:p-10 rounded-2xl" onsubmit="handleFormSubmit(event)">
-                <div class="grid sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="text-xs font-bold text-slate-400 block mb-2">Name</label>
-                        <input type="text" required class="w-full bg-[#090D16] border border-[#1E293B] text-white px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
-                    </div>
-                    <div>
-                        <label class="text-xs font-bold text-slate-400 block mb-2">Email Address</label>
-                        <input type="email" required class="w-full bg-[#090D16] border border-[#1E293B] text-white px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
-                    </div>
-                </div>
-                <div>
-                    <label class="text-xs font-bold text-slate-400 block mb-2">Project Category</label>
-                    <select class="w-full bg-[#090D16] border border-[#1E293B] text-slate-300 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
-                        <option>Structural Framing Modeling</option>
-                        <option>Appraisal & Element Auditing</option>
-                        <option>SitePlann Early Info Request</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="text-xs font-bold text-slate-400 block mb-2">Scope Criteria Parameters</label>
-                    <textarea rows="4" required class="w-full bg-[#090D16] border border-[#1E293B] text-white px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-white text-black font-bold text-xs py-3.5 rounded-lg hover:bg-slate-200 transition-all">Submit Brief parameters</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-12 border-t border-[#1E293B] text-center text-xs text-slate-600 space-y-3">
-        <div class="font-bold text-slate-400">Lawrence Kiminja</div>
-        <div>Civil Engineering & Structural Design Portfolio</div>
-        <div class="text-[10px] text-slate-700">&copy; 2026 Lawrence Kiminja. All Rights Reserved.</div>
-    </footer>
-
-    <!-- INTERACTIVE SCRIPTS -->
-    <script>
-        // Responsive Menu Toggle Logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
-
-        // Interactive Image Slider Functionality
-        function changeSlide(sliderId, direction) {
-            const container = document.querySelector(`[data-slider="${sliderId}"]`);
-            if (!container) return;
-            const images = container.querySelectorAll('.slider-img');
-            if (images.length <= 1) return;
-
-            let activeIndex = -1;
-            images.forEach((img, index) => {
-                if (img.classList.contains('active')) activeIndex = index;
-            });
-
-            images[activeIndex].classList.remove('active');
-            let newIndex = activeIndex + direction;
-            if (newIndex >= images.length) newIndex = 0;
-            if (newIndex < 0) newIndex = images.length - 1;
-            images[newIndex].classList.add('active');
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            alert("Scope details logged successfully. Review track will initialize shortly.");
-            e.target.reset();
-        }
-    </script>
-</body>
-</html>
+                        <button onclick="changeSlide('appraisal-design', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button onclick="changeSlide('appraisal-design', 1)"
