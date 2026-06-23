@@ -12,10 +12,11 @@
                 extend: {
                     colors: {
                         fintech: {
-                            dark: '#090D16',
-                            card: '#121824',
-                            accent: '#38BDF8',
-                            border: '#1E293B'
+                            lightBg: '#F8FAFC',
+                            lightCard: '#FFFFFF',
+                            darkAccent: '#090D16',
+                            skyAccent: '#0284C7',
+                            border: '#E2E8F0'
                         }
                     }
                 }
@@ -27,42 +28,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .slider-img { display: none; width: 100%; height: 100%; object-fit: cover; }
-        .slider-img.active { display: block; }
+        /* Smooth Stack Deck Transitions */
+        .card-stack-item {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0.3s step-end, opacity 0.4s ease;
+        }
     </style>
 </head>
-<body class="bg-[#090D16] text-slate-300 antialiased selection:bg-sky-500 selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-700 antialiased selection:bg-[#090D16] selection:text-white">
 
     <!-- Tech Grid Background -->
-    <div class="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+    <div class="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full bg-[#090D16]/80 backdrop-blur-md border-b border-[#1E293B] z-50">
+    <nav class="fixed top-0 left-0 w-full bg-[#FFFFFF]/80 backdrop-blur-md border-b border-[#E2E8F0] z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div>
-                <a href="#" class="text-lg font-bold text-white tracking-tight">Lawrence Kiminja</a>
-                <span class="text-[10px] block font-semibold text-sky-400 tracking-wider uppercase">Civil Engineering & Design</span>
+                <a href="#" class="text-lg font-bold text-[#090D16] tracking-tight">Lawrence Kiminja</a>
+                <span class="text-[10px] block font-semibold text-sky-600 tracking-wider uppercase">Civil Engineering & Design</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
-                <a href="#" class="hover:text-white transition-colors">Home</a>
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
-                <a href="#services" class="hover:text-white transition-colors">Services</a>
-                <a href="#siteplann" class="hover:text-white transition-colors">SitePlann</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#" class="hover:text-[#090D16] transition-colors">Home</a>
+                <a href="#about" class="hover:text-[#090D16] transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-[#090D16] transition-colors">Portfolio</a>
+                <a href="#services" class="hover:text-[#090D16] transition-colors">Services</a>
+                <a href="#siteplann" class="hover:text-[#090D16] transition-colors">SitePlann</a>
             </div>
             <div class="hidden md:block">
-                <button onclick="toggleContactModal(true)" class="bg-white text-black px-4 py-2 rounded-full text-xs font-bold hover:bg-slate-200 transition-all shadow-sm">Get in Touch</button>
+                <button onclick="toggleContactModal(true)" class="bg-[#090D16] text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-slate-800 transition-all shadow-sm">Get in Touch</button>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-white"><i class="fa-solid fa-bars text-xl"></i></button>
+            <button id="mobile-menu-btn" class="md:hidden text-[#090D16]"><i class="fa-solid fa-bars text-xl"></i></button>
         </div>
         <!-- Mobile Nav -->
-        <div id="mobile-menu" class="hidden bg-[#090D16] border-b border-[#1E293B] p-6 space-y-3">
-            <a href="#" class="block text-sm text-slate-400">Home</a>
-            <a href="#about" class="block text-sm text-slate-400">About</a>
-            <a href="#portfolio" class="block text-sm text-slate-400">Portfolio</a>
-            <a href="#services" class="block text-sm text-slate-400">Services</a>
-            <a href="#siteplann" class="block text-sm text-slate-400">SitePlann</a>
-            <button onclick="toggleContactModal(true); document.getElementById('mobile-menu').classList.add('hidden');" class="block w-full text-sm text-center bg-white text-black py-2 rounded-full font-bold mt-2">Get in Touch</button>
+        <div id="mobile-menu" class="hidden bg-[#FFFFFF] border-b border-[#E2E8F0] p-6 space-y-3">
+            <a href="#" class="block text-sm text-slate-600">Home</a>
+            <a href="#about" class="block text-sm text-slate-600">About</a>
+            <a href="#portfolio" class="block text-sm text-slate-600">Portfolio</a>
+            <a href="#services" class="block text-sm text-slate-600">Services</a>
+            <a href="#siteplann" class="block text-sm text-slate-600">SitePlann</a>
+            <button onclick="toggleContactModal(true); document.getElementById('mobile-menu').classList.add('hidden');" class="block w-full text-sm text-center bg-[#090D16] text-white py-2 rounded-full font-bold mt-2">Get in Touch</button>
         </div>
     </nav>
 
@@ -70,36 +73,36 @@
     <header class="pt-40 pb-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-16 items-center">
             <div class="md:col-span-7 space-y-6 text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20">
-                    <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span> Open for Engineering Scope Consultation
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-700 border border-sky-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse"></span> Open for Engineering Scope Consultation
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#090D16] tracking-tight leading-[1.1]">
                     Engineering Resilient Infrastructure.
                 </h1>
-                <p class="text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed">
+                <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
                     Civil Engineer focused on structural design optimization, manual load verifications, code-compliant modeling, and precision site tracking frameworks.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#portfolio" class="bg-white text-black px-6 py-3 rounded-full text-sm font-bold hover:bg-slate-200 transition-all shadow-md">View Work Portfolio</a>
-                    <button onclick="toggleContactModal(true)" class="bg-transparent text-white border border-[#1E293B] hover:bg-[#121824] px-6 py-3 rounded-full text-sm font-bold transition-all">Discuss Brief</button>
+                    <a href="#portfolio" class="bg-[#090D16] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-slate-800 transition-all shadow-md">View Work Portfolio</a>
+                    <button onclick="toggleContactModal(true)" class="bg-transparent text-[#090D16] border border-[#E2E8F0] hover:bg-[#F1F5F9] px-6 py-3 rounded-full text-sm font-bold transition-all">Discuss Brief</button>
                 </div>
             </div>
             <div class="md:col-span-5 flex justify-center md:justify-end">
-                <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[#1E293B] bg-[#121824] p-3 shadow-2xl">
-                    <img src="WhatsApp Image 2024-07-03 at 1.06.09 PM (1).jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter grayscale contrast-125">
+                <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white p-3 shadow-xl">
+                    <img src="WhatsApp Image 2024-07-03 at 1.06.09 PM (1).jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-110">
                 </div>
             </div>
         </div>
     </header>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 border-t border-[#1E293B]">
+    <section id="about" class="py-24 border-t border-[#E2E8F0] bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
-                <h2 class="text-2xl font-bold text-white tracking-tight">Technical Rigor Meets Execution</h2>
-                <p class="text-sm text-slate-500 mt-2">Balancing manual mechanics with systematic software logic.</p>
+                <h2 class="text-2xl font-bold text-[#090D16] tracking-tight">Technical Rigor Meets Execution</h2>
+                <p class="text-sm text-slate-400 mt-2">Balancing manual mechanics with systematic software logic.</p>
             </div>
-            <div class="md:col-span-2 space-y-6 text-slate-400 text-base sm:text-lg leading-relaxed">
+            <div class="md:col-span-2 space-y-6 text-slate-600 text-base sm:text-lg leading-relaxed">
                 <p>
                     I approach structural engineering through a disciplined logic track. By combining comprehensive code-based modeling with fundamental manual load path calculations, I ensure every member sizing strategy is highly optimized yet entirely safe.
                 </p>
@@ -110,97 +113,90 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO CARDS SECTION (EXACT SNAPSHOT ALIGNMENT) -->
-    <section id="portfolio" class="py-24 border-t border-[#1E293B] bg-[#0c121e]/50">
+    <!-- PORTFOLIO CARDS SECTION (WITH DESIGN OVERLAYS COPIED FROM COMULATE) -->
+    <section id="portfolio" class="py-24 border-t border-[#E2E8F0] bg-[#F1F5F9]/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-16">
-                <h2 class="text-3xl font-extrabold text-white tracking-tight">Engineering Projects Portfolio</h2>
-                <p class="text-slate-500 text-sm mt-1">Interactive sliding arrays built for active project updates.</p>
+                <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Engineering Projects Portfolio</h2>
+                <p class="text-slate-500 text-sm mt-1">Click directly on any image stack to smoothly sweep and reveal the next asset.</p>
             </div>
 
             <!-- 5-Card Layout Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
                 <!-- CARD 1: ALTRUCS DESIGNS -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="altrucs-designs">
-                        <!-- Note: Double-check if the path uses singular or plural directory labels matching your local repository folder names -->
-                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/5-bedroom-villa-syokimau (1).jpg" class="slider-img active" alt="Villa Syokimau Layout">
-                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/5-bedroom-villa-in-meru (1).jpg" class="slider-img" alt="Villa Meru Design">
-                        <img src="DESIGN_PROJECTS/ALTRUCS_PROJECT/7-bedroom-syokimau-87 (1).jpg" class="slider-img" alt="Residential Footprint Layout">
-                        
-                        <button onclick="changeSlide('altrucs-designs', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full shadow flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('altrucs-designs', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full shadow flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
+                    <!-- Interactive Stack Container -->
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="altrucs-designs" onclick="rotateStackDeck('altrucs-designs')">
+                        <img src="5-bedroom-villa-syokimau (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Villa Syokimau Layout">
+                        <img src="5-bedroom-villa-in-meru (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Villa Meru Design">
+                        <img src="7-bedroom-syokimau-87 (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Residential Footprint Layout">
+                        <img src="commercial-development-along-parliament-road-syokimau-1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Commercial Layout">
+                        <img src="kisumu-residence1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Kisumu Residence">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Altrucs Designs</div>
-                        <h3 class="text-lg font-bold text-white">Residential & Commercial Frameworks</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Structural configuration and element sizing analytics matching continuous residential spatial footprints and retail ground profiles.</p>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Altrucs Designs</div>
+                        <h3 class="text-lg font-bold text-[#090D16]">Residential & Commercial Frameworks</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">Structural configuration and element sizing analytics matching continuous residential spatial footprints and retail ground profiles.</p>
                     </div>
                 </div>
 
                 <!-- CARD 2: AUDITS -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="integrity-audits">
-                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.54 PM.jpeg" class="slider-img active" alt="Integrity Audits Base">
-                        <img src="DESIGN_PROJECTS/Appraisal_Projects/WhatsApp Image 2026-06-23 at 1.42.56 PM.jpeg" class="slider-img" alt="Safety Evaluations">
-                        
-                        <button onclick="changeSlide('integrity-audits', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('integrity-audits', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
+                    <!-- Interactive Stack Container -->
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="integrity-audits" onclick="rotateStackDeck('integrity-audits')">
+                        <img src="WhatsApp Image 2026-06-23 at 1.42.54 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Integrity Audits Base">
+                        <img src="WhatsApp Image 2026-06-23 at 1.42.56 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Safety Evaluations">
+                        <img src="WhatsApp Image 2026-06-23 at 1.42.57 PM (1).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Column Detailing">
+                        <img src="WhatsApp Image 2026-06-23 at 1.42.57 PM (2).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Reinforcement Layout">
+                        <img src="WhatsApp Image 2026-06-23 at 1.42.57 PM.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Structural Elevation">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Audits</div>
-                        <h3 class="text-lg font-bold text-white">Infrastructure Integrity Appraisals</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Condition modeling, safety load evaluations, and diagnostic analytics reviewing localized reinforcement frameworks.</p>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Audits</div>
+                        <h3 class="text-lg font-bold text-[#090D16]">Infrastructure Integrity Appraisals</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">Condition modeling, safety load evaluations, and diagnostic analytics reviewing localized reinforcement frameworks.</p>
                     </div>
                 </div>
 
                 <!-- CARD 3: REGIONAL -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="botswana-regional">
-                        <img src="SITE_PROGRESS/BOTSWANA_PROJECT/WhatsApp Image 2026-06-23 at 1.52.14 PM (1).jpeg" class="slider-img active" alt="Botswana Layout Base">
-                        <img src="SITE_PROGRESS/BOTSWANA_PROJECT/WhatsApp Image 2026-06-23 at 1.52.14 PM (2).jpeg" class="slider-img" alt="Subgrade Verification">
-                        
-                        <button onclick="changeSlide('botswana-regional', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('botswana-regional', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
+                    <!-- Interactive Stack Container -->
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="botswana-regional" onclick="rotateStackDeck('botswana-regional')">
+                        <img src="WhatsApp Image 2026-06-23 at 1.38.19 PM (1).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Botswana Site Progression">
+                        <img src="WhatsApp Image 2026-06-23 at 1.38.21 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Framing Layout">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Regional</div>
-                        <h3 class="text-lg font-bold text-white">Botswana Infrastructure Scope</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Cross-border framing calculations tailored to regional subgrade parameters and loading guidelines.</p>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Regional</div>
+                        <h3 class="text-lg font-bold text-[#090D16]">Botswana Infrastructure Scope</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">Cross-border framing calculations tailored to regional subgrade parameters and loading guidelines.</p>
                     </div>
                 </div>
 
                 <!-- CARD 4: INDUSTRIAL -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="kpc-industrial">
-                        <!-- Realigned local file path links to ensure standard project images fetch correctly without fallback loops -->
-                        <img src="SITE_PROGRESS/KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.48.55 PM.jpeg" class="slider-img active" alt="KPC Infrastructure Frame">
-                        <img src="SITE_PROGRESS/KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.48.58 PM (1).jpeg" class="slider-img" alt="Industrial Foundation Log">
-                        
-                        <button onclick="changeSlide('kpc-industrial', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('kpc-industrial', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
+                    <!-- Interactive Stack Container -->
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="kpc-industrial" onclick="rotateStackDeck('kpc-industrial')">
+                        <img src="WhatsApp Image 2026-06-23 at 1.38.23 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="KPC Frame">
+                        <img src="WhatsApp Image 2026-06-23 at 1.38.22 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Casting Verification">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Industrial</div>
-                        <h3 class="text-lg font-bold text-white">KPC Structural Analytics</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">High-load configuration reviews requiring meticulous component assessment arrays and pipeline interface stability protocols.</p>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial</div>
+                        <h3 class="text-lg font-bold text-[#090D16]">KPC Structural Analytics</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">High-load configuration reviews requiring meticulous component assessment arrays and pipeline interface stability protocols.</p>
                     </div>
                 </div>
 
                 <!-- CARD 5: DEVELOPMENTS -->
-                <div class="bg-[#121824] border border-[#1E293B] rounded-2xl overflow-hidden p-4 space-y-4 hover:border-slate-700 transition-all flex flex-col justify-between">
-                    <div class="h-56 bg-[#090D16] rounded-xl overflow-hidden relative group/btn" data-slider="nyoro-developments">
-                        <img src="SITE_PROGRESS/ALTRUCS_PROJECT/WhatsApp Image 2026-06-23 at 1.38.19 PM (1).jpeg" class="slider-img active" alt="Nyoro Setup Context">
-                        <img src="SITE_PROGRESS/ALTRUCS_PROJECT/WhatsApp Image 2026-06-23 at 1.38.21 PM.jpeg" class="slider-img" alt="Rebar Assembly Detailing">
-                        
-                        <button onclick="changeSlide('nyoro-developments', -1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-                        <button onclick="changeSlide('nyoro-developments', 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#090D16]/90 border border-[#1E293B] text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/btn:opacity-100 transition-opacity"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
+                    <!-- Interactive Stack Container -->
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="nyoro-developments" onclick="rotateStackDeck('nyoro-developments')">
+                        <img src="WhatsApp Image 2026-06-23 at 1.38.26 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Nyoro Infrastructure Layout">
+                        <img src="WhatsApp Image 2026-06-23 at 1.38.35 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Elevation Context">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest">Developments</div>
-                        <h3 class="text-lg font-bold text-white">Nyoro Infrastructure Layout</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">Elevation modeling, spatial balancing, and element orientation strategies defining regional residential frameworks.</p>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Developments</div>
+                        <h3 class="text-lg font-bold text-[#090D16]">Nyoro Infrastructure Layout</h3>
+                        <p class="text-slate-500 text-xs leading-relaxed">Elevation modeling, spatial balancing, and element orientation strategies defining regional residential frameworks.</p>
                     </div>
                 </div>
 
@@ -209,122 +205,122 @@
     </section>
 
     <!-- CORE SERVICES -->
-    <section id="services" class="py-24 border-t border-[#1E293B]">
+    <section id="services" class="py-24 border-t border-[#E2E8F0] bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-2xl font-bold text-white mb-12">Engineering Scope Focus</h2>
+            <h2 class="text-2xl font-bold text-[#090D16] mb-12">Engineering Scope Focus</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#121824]/40 border border-[#1E293B] p-6 rounded-xl space-y-3">
-                    <div class="text-sky-400 text-lg"><i class="fa-solid fa-calculator"></i></div>
-                    <h3 class="text-base font-bold text-white">Structural Analysis</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Rigorous checks against BS 8110 and Eurocode standards covering multi-story steel framing configurations.</p>
+                <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-6 rounded-xl space-y-3 shadow-sm">
+                    <div class="text-sky-600 text-lg"><i class="fa-solid fa-calculator"></i></div>
+                    <h3 class="text-base font-bold text-[#090D16]">Structural Analysis</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Rigorous checks against BS 8110 and Eurocode standards covering multi-story steel framing configurations.</p>
                 </div>
-                <div class="bg-[#121824]/40 border border-[#1E293B] p-6 rounded-xl space-y-3">
-                    <div class="text-sky-400 text-lg"><i class="fa-solid fa-trowel-bricks"></i></div>
-                    <h3 class="text-base font-bold text-white">Foundation Mechanics</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Converting soil load parameters seamlessly into sound, highly cost-optimized footing systems.</p>
+                <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-6 rounded-xl space-y-3 shadow-sm">
+                    <div class="text-sky-600 text-lg"><i class="fa-solid fa-trowel-bricks"></i></div>
+                    <h3 class="text-base font-bold text-[#090D16]">Foundation Mechanics</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Converting soil load parameters seamlessly into sound, highly cost-optimized footing systems.</p>
                 </div>
-                <div class="bg-[#121824]/40 border border-[#1E293B] p-6 rounded-xl space-y-3">
-                    <div class="text-sky-400 text-lg"><i class="fa-solid fa-diagram-project"></i></div>
-                    <h3 class="text-base font-bold text-white">Project Controls</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Setting up detailed site logs, monitoring variances, and tracking asset timelines cleanly.</p>
+                <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-6 rounded-xl space-y-3 shadow-sm">
+                    <div class="text-sky-600 text-lg"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3 class="text-base font-bold text-[#090D16]">Project Controls</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Setting up detailed site logs, monitoring variances, and tracking asset timelines cleanly.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SITEPLANN SAAS PRODUCT SPOTLIGHT -->
-    <section id="siteplann" class="py-24 border-y border-[#1E293B] bg-gradient-to-r from-[#090D16] to-[#121824]">
+    <section id="siteplann" class="py-24 border-y border-[#1E293B] bg-gradient-to-r from-[#090D16] to-[#1E293B]">
         <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
             <div class="text-xs font-bold text-sky-400 uppercase tracking-widest">Proprietary Software Integration</div>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white">SitePlann: Digital Site Tracking</h2>
-            <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+            <p class="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
                 I am actively developing **SitePlann**—a modern digital repository system engineered specifically to store, update, and manage layout changes and logs straight from active construction sites.
             </p>
             <div class="pt-2">
-                <button onclick="toggleContactModal(true)" class="bg-white text-black font-bold text-xs px-5 py-3 rounded-full hover:bg-slate-200 transition-all">Request Product Parameters</button>
+                <button onclick="toggleContactModal(true)" class="bg-white text-[#090D16] font-bold text-xs px-5 py-3 rounded-full hover:bg-slate-100 transition-all shadow-md">Request Product Parameters</button>
             </div>
         </div>
     </section>
 
-    <!-- DIRECT CONTACT BRIEF FORM (REDIRECTS TO EMAIL) -->
-    <section id="contact" class="py-24 bg-[#090D16]">
+    <!-- DIRECT CONTACT BRIEF FORM -->
+    <section id="contact" class="py-24 bg-[#F8FAFC]">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center space-y-2 mb-12">
-                <h2 class="text-2xl font-bold text-white">Initiate a Design Brief</h2>
-                <p class="text-xs text-slate-500">Provide project lines below to compile your brief directly into an email draft.</p>
+                <h2 class="text-2xl font-bold text-[#090D16]">Initiate a Design Brief</h2>
+                <p class="text-xs text-slate-400">Provide project lines below to compile your brief directly into an email draft.</p>
             </div>
-            <form class="space-y-6 bg-[#121824] border border-[#1E293B] p-6 sm:p-10 rounded-2xl" onsubmit="handleFormSubmit(event)">
+            <form class="space-y-6 bg-white border border-[#E2E8F0] p-6 sm:p-10 rounded-2xl shadow-sm" onsubmit="handleFormSubmit(event)">
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div>
-                        <label class="text-xs font-bold text-slate-400 block mb-2">Name</label>
-                        <input id="form-name" type="text" required class="w-full bg-[#090D16] border border-[#1E293B] text-white px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
+                        <label class="text-xs font-bold text-slate-500 block mb-2">Name</label>
+                        <input id="form-name" type="text" required class="w-full bg-[#F8FAFC] border border-[#E2E8F0] text-slate-800 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
                     </div>
                     <div>
-                        <label class="text-xs font-bold text-slate-400 block mb-2">Email Address</label>
-                        <input id="form-email" type="email" required class="w-full bg-[#090D16] border border-[#1E293B] text-white px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
+                        <label class="text-xs font-bold text-slate-500 block mb-2">Email Address</label>
+                        <input id="form-email" type="email" required class="w-full bg-[#F8FAFC] border border-[#E2E8F0] text-slate-800 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
                     </div>
                 </div>
                 <div>
-                    <label class="text-xs font-bold text-slate-400 block mb-2">Project Category</label>
-                    <select id="form-category" class="w-full bg-[#090D16] border border-[#1E293B] text-slate-300 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
+                    <label class="text-xs font-bold text-slate-500 block mb-2">Project Category</label>
+                    <select id="form-category" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] text-slate-600 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
                         <option>Structural Framing Modeling</option>
                         <option>Appraisal & Element Auditing</option>
                         <option>SitePlann Early Info Request</option>
                     </select>
                 </div>
                 <div>
-                    <label class="text-xs font-bold text-slate-400 block mb-2">Scope Criteria Parameters</label>
-                    <textarea id="form-message" rows="4" required class="w-full bg-[#090D16] border border-[#1E293B] text-white px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500"></textarea>
+                    <label class="text-xs font-bold text-slate-500 block mb-2">Scope Criteria Parameters</label>
+                    <textarea id="form-message" rows="4" required class="w-full bg-[#F8FAFC] border border-[#E2E8F0] text-slate-800 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-white text-black font-bold text-xs py-3.5 rounded-lg hover:bg-slate-200 transition-all">Generate & Send Email Brief</button>
+                <button type="submit" class="w-full bg-[#090D16] text-white font-bold text-xs py-3.5 rounded-lg hover:bg-slate-800 transition-all shadow-md">Generate & Send Email Brief</button>
             </form>
         </div>
     </section>
 
-    <!-- INTERACTIVE FINTECH CONTACT & HIRE MODAL OVERLAY -->
-    <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/90 backdrop-blur-md hidden items-center justify-center z-50 px-4 transition-all duration-300">
-        <div class="bg-[#121824] border border-[#1E293B] max-w-md w-full rounded-2xl p-6 sm:p-8 space-y-6 relative shadow-2xl">
+    <!-- INTERACTIVE CONTACT & HIRE MODAL OVERLAY -->
+    <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/40 backdrop-blur-md hidden items-center justify-center z-50 px-4 transition-all duration-300">
+        <div class="bg-white border border-[#E2E8F0] max-w-md w-full rounded-2xl p-6 sm:p-8 space-y-6 relative shadow-2xl">
             <!-- Close Button -->
-            <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors">
+            <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-[#090D16] transition-colors">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
             
             <div class="space-y-1">
-                <h3 class="text-xl font-bold text-white tracking-tight">Contact Information</h3>
+                <h3 class="text-xl font-bold text-[#090D16] tracking-tight">Contact Information</h3>
                 <p class="text-xs text-slate-400">Direct transmission coordinates for technical briefs and consulting scopes.</p>
             </div>
 
-            <hr class="border-[#1E293B]">
+            <hr class="border-[#E2E8F0]">
 
             <!-- Contact Vectors -->
             <div class="space-y-4">
                 <div class="flex items-start gap-4">
-                    <div class="bg-sky-500/10 text-sky-400 p-2.5 rounded-lg text-sm shrink-0 mt-0.5"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="bg-sky-500/10 text-sky-600 p-2.5 rounded-lg text-sm shrink-0 mt-0.5"><i class="fa-solid fa-envelope"></i></div>
                     <div>
-                        <span class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">Direct Mail</span>
-                        <a href="mailto:lawrencekiminja10@gmail.com" class="text-white font-medium hover:text-sky-400 text-sm transition-colors break-all">lawrencekiminja10@gmail.com</a>
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Direct Mail</span>
+                        <a href="mailto:lawrencekiminja10@gmail.com" class="text-[#090D16] font-medium hover:text-sky-600 text-sm transition-colors break-all">lawrencekiminja10@gmail.com</a>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="bg-emerald-500/10 text-emerald-400 p-2.5 rounded-lg text-sm shrink-0 mt-0.5"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="bg-emerald-500/10 text-emerald-600 p-2.5 rounded-lg text-sm shrink-0 mt-0.5"><i class="fa-solid fa-location-dot"></i></div>
                     <div>
-                        <span class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">Operational Location</span>
-                        <span class="text-slate-300 font-medium text-sm">Nairobi, Kenya</span>
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Operational Location</span>
+                        <span class="text-slate-700 font-medium text-sm">Nairobi, Kenya</span>
                     </div>
                 </div>
             </div>
 
-            <hr class="border-[#1E293B]">
+            <hr class="border-[#E2E8F0]">
 
             <!-- HIRE ME ACTIONS -->
             <div class="space-y-3">
-                <div class="text-[10px] font-bold text-sky-400 uppercase tracking-widest block mb-1">Contract Execution</div>
+                <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Contract Execution</div>
                 <a href="mailto:lawrencekiminja10@gmail.com?subject=Strategic%20Engineering%20Hire%20Engagement&body=Hello%20Lawrence,%0D%0A%0D%0AI%20am%20reaching%20out%20to%20engage%20your%20services%20for%20an%20upcoming%20project.%20Let's%20discuss%20the%20scope%20criteria." 
-                   class="flex items-center justify-between bg-white hover:bg-slate-200 text-black font-extrabold text-sm py-3.5 px-5 rounded-xl transition-all shadow-md group">
+                   class="flex items-center justify-between bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-sm py-3.5 px-5 rounded-xl transition-all shadow-md group">
                     <span>🚀 Hire Me as Consultant</span>
                     <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                 </a>
-                <p class="text-[10px] text-center text-slate-500 leading-relaxed pt-1">
+                <p class="text-[10px] text-center text-slate-400 leading-relaxed pt-1">
                     Clicking initiates an urgent project acquisition brief directly inside your mail client.
                 </p>
             </div>
@@ -332,10 +328,10 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-[#1E293B] text-center text-xs text-slate-600 space-y-3">
-        <div class="font-bold text-slate-400">Lawrence Kiminja</div>
+    <footer class="py-12 border-t border-[#E2E8F0] bg-white text-center text-xs text-slate-400 space-y-3">
+        <div class="font-bold text-[#090D16]">Lawrence Kiminja</div>
         <div>Civil Engineering & Structural Design Portfolio</div>
-        <div class="text-[10px] text-slate-700">&copy; 2026 Lawrence Kiminja. All Rights Reserved.</div>
+        <div class="text-[10px] text-slate-400">&copy; 2026 Lawrence Kiminja. All Rights Reserved.</div>
     </footer>
 
     <!-- INTERACTIVE SCRIPTS -->
@@ -346,25 +342,39 @@
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
         menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
 
-        // Interactive Image Slider Functionality
-        function changeSlide(sliderId, direction) {
-            const container = document.querySelector(`[data-slider="${sliderId}"]`);
+        // Comulate-inspired Stack Rotation Engine
+        function rotateStackDeck(sliderId) {
+            const container = document.querySelector(`[data-stack-slider="${sliderId}"]`);
             if (!container) return;
-            const images = container.querySelectorAll('.slider-img');
+            const images = Array.from(container.querySelectorAll('.card-stack-item'));
             if (images.length <= 1) return;
 
-            let activeIndex = -1;
-            images.forEach((img, index) => {
-                if (img.classList.contains('active')) activeIndex = index;
+            // Extract tracking coordinate index
+            let currentIndex = parseInt(container.dataset.currentIndex || "0");
+            currentIndex = (currentIndex + 1) % images.length;
+            container.dataset.currentIndex = currentIndex;
+
+            images.forEach((img, i) => {
+                // Calculate position relative to the topmost card
+                let relIndex = (i - currentIndex + images.length) % images.length;
+                
+                // Clear active positional/rotational assignments
+                img.className = "card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer";
+
+                if (relIndex === 0) {
+                    // Front Facing Card
+                    img.classList.add("z-30", "opacity-100", "translate-x-0", "translate-y-0", "rotate-0", "scale-100");
+                } else if (relIndex === 1) {
+                    // Middle Stack Overlay
+                    img.classList.add("z-20", "opacity-90", "translate-x-2", "translate-y-1.5", "rotate-1", "scale-[0.97]");
+                } else if (relIndex === 2) {
+                    // Underneath Stack Overlay
+                    img.classList.add("z-10", "opacity-80", "translate-x-4", "translate-y-3", "rotate-2", "scale-[0.94]");
+                } else {
+                    // Deep Hidden Staged Cards
+                    img.classList.add("z-0", "opacity-0", "translate-x-6", "translate-y-4.5", "rotate-3", "scale-[0.91]");
+                }
             });
-
-            if (activeIndex === -1) activeIndex = 0; // Fallback context tracking
-
-            images[activeIndex].classList.remove('active');
-            let newIndex = activeIndex + direction;
-            if (newIndex >= images.length) newIndex = 0;
-            if (newIndex < 0) newIndex = images.length - 1;
-            images[newIndex].classList.add('active');
         }
 
         // Contact Modal Logic Toggle
