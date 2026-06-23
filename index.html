@@ -28,7 +28,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        /* Smooth Stack Deck Transitions */
         .card-stack-item {
             transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), z-index 0.3s step-end, opacity 0.4s ease;
         }
@@ -51,7 +50,7 @@
                 <a href="#about" class="hover:text-[#090D16] transition-colors">About</a>
                 <a href="#portfolio" class="hover:text-[#090D16] transition-colors">Portfolio</a>
                 <a href="#services" class="hover:text-[#090D16] transition-colors">Services</a>
-                <a href="#siteplann" class="hover:text-[#090D16] transition-colors">SitePlann</a>
+                <a href="#contact" class="hover:text-[#090D16] transition-colors">Contact Brief</a>
             </div>
             <div class="hidden md:block">
                 <button onclick="toggleContactModal(true)" class="bg-[#090D16] text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-slate-800 transition-all shadow-sm">Get in Touch</button>
@@ -64,7 +63,7 @@
             <a href="#about" class="block text-sm text-slate-600">About</a>
             <a href="#portfolio" class="block text-sm text-slate-600">Portfolio</a>
             <a href="#services" class="block text-sm text-slate-600">Services</a>
-            <a href="#siteplann" class="block text-sm text-slate-600">SitePlann</a>
+            <a href="#contact" class="block text-sm text-slate-600">Contact Brief</a>
             <button onclick="toggleContactModal(true); document.getElementById('mobile-menu').classList.add('hidden');" class="block w-full text-sm text-center bg-[#090D16] text-white py-2 rounded-full font-bold mt-2">Get in Touch</button>
         </div>
     </nav>
@@ -80,7 +79,7 @@
                     Engineering Resilient Infrastructure.
                 </h1>
                 <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-                    Civil Engineer focused on structural design optimization, manual load verifications, code-compliant modeling, and precision site tracking frameworks.
+                    Civil Engineer focused on structural design optimization, manual load verifications, code-compliant modeling, and structural efficiency.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
                     <a href="#portfolio" class="bg-[#090D16] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-slate-800 transition-all shadow-md">View Work Portfolio</a>
@@ -89,7 +88,7 @@
             </div>
             <div class="md:col-span-5 flex justify-center md:justify-end">
                 <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white p-3 shadow-xl">
-                    <img src="WhatsApp Image 2024-07-03 at 1.06.09 PM (1).jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-110">
+                    <img src="DesignSupervision_Projects/WhatsApp Image 2024-07-03 at 1.06.09 PM (1).jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-110">
                 </div>
             </div>
         </div>
@@ -100,7 +99,7 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
                 <h2 class="text-2xl font-bold text-[#090D16] tracking-tight">Technical Rigor Meets Execution</h2>
-                <p class="text-sm text-slate-400 mt-2">Balancing manual mechanics with systematic software logic.</p>
+                <p class="text-sm text-slate-400 mt-2">Balancing manual mechanics with systematic design logic.</p>
             </div>
             <div class="md:col-span-2 space-y-6 text-slate-600 text-base sm:text-lg leading-relaxed">
                 <p>
@@ -113,7 +112,7 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO CARDS SECTION (WITH DESIGN OVERLAYS COPIED FROM COMULATE) -->
+    <!-- PORTFOLIO CARDS SECTION (MAPPED TO YOUR SUBFOLDERS) -->
     <section id="portfolio" class="py-24 border-t border-[#E2E8F0] bg-[#F1F5F9]/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-16">
@@ -121,77 +120,58 @@
                 <p class="text-slate-500 text-sm mt-1">Click directly on any image stack to smoothly sweep and reveal the next asset.</p>
             </div>
 
-            <!-- 5-Card Layout Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
-                <!-- CARD 1: ALTRUCS DESIGNS -->
+                <!-- CARD 1: DESIGN SUPERVISION PROJECTS -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <!-- Interactive Stack Container -->
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="altrucs-designs" onclick="rotateStackDeck('altrucs-designs')">
-                        <img src="5-bedroom-villa-syokimau (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Villa Syokimau Layout">
-                        <img src="5-bedroom-villa-in-meru (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Villa Meru Design">
-                        <img src="7-bedroom-syokimau-87 (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Residential Footprint Layout">
-                        <img src="commercial-development-along-parliament-road-syokimau-1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Commercial Layout">
-                        <img src="kisumu-residence1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Kisumu Residence">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="design-supervision" onclick="rotateStackDeck('design-supervision')">
+                        <img src="DesignSupervision_Projects/5-bedroom-villa-syokimau (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Villa Syokimau Layout">
+                        <img src="DesignSupervision_Projects/5-bedroom-villa-in-meru (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Villa Meru Design">
+                        <img src="DesignSupervision_Projects/7-bedroom-syokimau-87 (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Residential Footprint Layout">
+                        <img src="DesignSupervision_Projects/commercial-development-along-parliament-road-syokimau-1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Commercial Layout">
+                        <img src="DesignSupervision_Projects/kisumu-residence1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Kisumu Residence">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Altrucs Designs</div>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Design & Supervision</div>
                         <h3 class="text-lg font-bold text-[#090D16]">Residential & Commercial Frameworks</h3>
                         <p class="text-slate-500 text-xs leading-relaxed">Structural configuration and element sizing analytics matching continuous residential spatial footprints and retail ground profiles.</p>
                     </div>
                 </div>
 
-                <!-- CARD 2: AUDITS -->
+                <!-- CARD 2: WASTEWATER PROJECTS -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <!-- Interactive Stack Container -->
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="integrity-audits" onclick="rotateStackDeck('integrity-audits')">
-                        <img src="WhatsApp Image 2026-06-23 at 1.42.54 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Integrity Audits Base">
-                        <img src="WhatsApp Image 2026-06-23 at 1.42.56 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Safety Evaluations">
-                        <img src="WhatsApp Image 2026-06-23 at 1.42.57 PM (1).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Column Detailing">
-                        <img src="WhatsApp Image 2026-06-23 at 1.42.57 PM (2).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Reinforcement Layout">
-                        <img src="WhatsApp Image 2026-06-23 at 1.42.57 PM.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Structural Elevation">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="wastewater" onclick="rotateStackDeck('wastewater')">
+                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.54 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Integrity Audits Base">
+                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.56 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Safety Evaluations">
+                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.57 PM (1).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Column Detailing">
+                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.57 PM (2).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Reinforcement Layout">
+                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.57 PM.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Structural Elevation">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Audits</div>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Wastewater Infrastructure</div>
                         <h3 class="text-lg font-bold text-[#090D16]">Infrastructure Integrity Appraisals</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">Condition modeling, safety load evaluations, and diagnostic analytics reviewing localized reinforcement frameworks.</p>
+                        <p class="text-slate-500 text-xs leading-relaxed">Condition modeling, safety load evaluations, and diagnostic analytics reviewing specialized public utility structures.</p>
                     </div>
                 </div>
 
-                <!-- CARD 3: REGIONAL -->
+                <!-- CARD 3: KPC PROJECT -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <!-- Interactive Stack Container -->
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="botswana-regional" onclick="rotateStackDeck('botswana-regional')">
-                        <img src="WhatsApp Image 2026-06-23 at 1.38.19 PM (1).jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Botswana Site Progression">
-                        <img src="WhatsApp Image 2026-06-23 at 1.38.21 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Framing Layout">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="kpc" onclick="rotateStackDeck('kpc')">
+                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.23 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="KPC Frame">
+                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.22 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Casting Verification">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Regional</div>
-                        <h3 class="text-lg font-bold text-[#090D16]">Botswana Infrastructure Scope</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">Cross-border framing calculations tailored to regional subgrade parameters and loading guidelines.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 4: INDUSTRIAL -->
-                <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <!-- Interactive Stack Container -->
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="kpc-industrial" onclick="rotateStackDeck('kpc-industrial')">
-                        <img src="WhatsApp Image 2026-06-23 at 1.38.23 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="KPC Frame">
-                        <img src="WhatsApp Image 2026-06-23 at 1.38.22 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Casting Verification">
-                    </div>
-                    <div class="space-y-2 flex-grow pt-2">
-                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial</div>
+                        <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial Scope</div>
                         <h3 class="text-lg font-bold text-[#090D16]">KPC Structural Analytics</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">High-load configuration reviews requiring meticulous component assessment arrays and pipeline interface stability protocols.</p>
+                        <p class="text-slate-500 text-xs leading-relaxed">High-load configuration reviews requiring meticulous component assessment arrays and industrial stability protocols.</p>
                     </div>
                 </div>
 
-                <!-- CARD 5: DEVELOPMENTS -->
+                <!-- CARD 4: NYORO DEVELOPMENTS -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <!-- Interactive Stack Container -->
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="nyoro-developments" onclick="rotateStackDeck('nyoro-developments')">
-                        <img src="WhatsApp Image 2026-06-23 at 1.38.26 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Nyoro Infrastructure Layout">
-                        <img src="WhatsApp Image 2026-06-23 at 1.38.35 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Elevation Context">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="nyoro" onclick="rotateStackDeck('nyoro')">
+                        <img src="NYORO/WhatsApp Image 2026-06-23 at 1.38.26 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Nyoro Infrastructure Layout">
+                        <img src="NYORO/WhatsApp Image 2026-06-23 at 1.38.35 PM.jpeg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Elevation Context">
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
                         <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Developments</div>
@@ -228,20 +208,6 @@
         </div>
     </section>
 
-    <!-- SITEPLANN SAAS PRODUCT SPOTLIGHT -->
-    <section id="siteplann" class="py-24 border-y border-[#1E293B] bg-gradient-to-r from-[#090D16] to-[#1E293B]">
-        <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
-            <div class="text-xs font-bold text-sky-400 uppercase tracking-widest">Proprietary Software Integration</div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">SitePlann: Digital Site Tracking</h2>
-            <p class="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
-                I am actively developing **SitePlann**—a modern digital repository system engineered specifically to store, update, and manage layout changes and logs straight from active construction sites.
-            </p>
-            <div class="pt-2">
-                <button onclick="toggleContactModal(true)" class="bg-white text-[#090D16] font-bold text-xs px-5 py-3 rounded-full hover:bg-slate-100 transition-all shadow-md">Request Product Parameters</button>
-            </div>
-        </div>
-    </section>
-
     <!-- DIRECT CONTACT BRIEF FORM -->
     <section id="contact" class="py-24 bg-[#F8FAFC]">
         <div class="max-w-3xl mx-auto px-6">
@@ -265,7 +231,7 @@
                     <select id="form-category" class="w-full bg-[#F8FAFC] border border-[#E2E8F0] text-slate-600 px-4 py-3 rounded-lg text-xs focus:outline-none focus:border-sky-500">
                         <option>Structural Framing Modeling</option>
                         <option>Appraisal & Element Auditing</option>
-                        <option>SitePlann Early Info Request</option>
+                        <option>Consultation Scope Brief</option>
                     </select>
                 </div>
                 <div>
@@ -298,7 +264,7 @@
                     <div class="bg-sky-500/10 text-sky-600 p-2.5 rounded-lg text-sm shrink-0 mt-0.5"><i class="fa-solid fa-envelope"></i></div>
                     <div>
                         <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Direct Mail</span>
-                        <a href="mailto:lawrencekiminja10@gmail.com" class="text-[#090D16] font-medium hover:text-sky-600 text-sm transition-colors break-all">lawrencekiminja10@gmail.com</a>
+                        <a href="mailto:kiminja83@gmail.com" class="text-[#090D16] font-medium hover:text-sky-600 text-sm transition-colors break-all">kiminja83@gmail.com</a>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -315,7 +281,7 @@
             <!-- HIRE ME ACTIONS -->
             <div class="space-y-3">
                 <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Contract Execution</div>
-                <a href="mailto:lawrencekiminja10@gmail.com?subject=Strategic%20Engineering%20Hire%20Engagement&body=Hello%20Lawrence,%0D%0A%0D%0AI%20am%20reaching%20out%20to%20engage%20your%20services%20for%20an%20upcoming%20project.%20Let's%20discuss%20the%20scope%20criteria." 
+                <a href="mailto:kiminja83@gmail.com?subject=Strategic%20Engineering%20Hire%20Engagement&body=Hello%20Lawrence,%0D%0A%0D%0AI%20am%20reaching%20out%20to%20engage%20your%20services%20for%20an%20upcoming%20project.%20Let's%20discuss%20the%20scope%20criteria." 
                    class="flex items-center justify-between bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-sm py-3.5 px-5 rounded-xl transition-all shadow-md group">
                     <span>🚀 Hire Me as Consultant</span>
                     <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
@@ -349,29 +315,21 @@
             const images = Array.from(container.querySelectorAll('.card-stack-item'));
             if (images.length <= 1) return;
 
-            // Extract tracking coordinate index
             let currentIndex = parseInt(container.dataset.currentIndex || "0");
             currentIndex = (currentIndex + 1) % images.length;
             container.dataset.currentIndex = currentIndex;
 
             images.forEach((img, i) => {
-                // Calculate position relative to the topmost card
                 let relIndex = (i - currentIndex + images.length) % images.length;
-                
-                // Clear active positional/rotational assignments
                 img.className = "card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer";
 
                 if (relIndex === 0) {
-                    // Front Facing Card
                     img.classList.add("z-30", "opacity-100", "translate-x-0", "translate-y-0", "rotate-0", "scale-100");
                 } else if (relIndex === 1) {
-                    // Middle Stack Overlay
                     img.classList.add("z-20", "opacity-90", "translate-x-2", "translate-y-1.5", "rotate-1", "scale-[0.97]");
                 } else if (relIndex === 2) {
-                    // Underneath Stack Overlay
                     img.classList.add("z-10", "opacity-80", "translate-x-4", "translate-y-3", "rotate-2", "scale-[0.94]");
                 } else {
-                    // Deep Hidden Staged Cards
                     img.classList.add("z-0", "opacity-0", "translate-x-6", "translate-y-4.5", "rotate-3", "scale-[0.91]");
                 }
             });
@@ -398,10 +356,10 @@
             const category = document.getElementById('form-category').value;
             const message = document.getElementById('form-message').value;
             
-            const emailTo = "lawrencekiminja10@gmail.com";
+            const emailTo = "kiminja83@gmail.com";
             const subject = encodeURIComponent(`Project Brief: ${category} - From ${name}`);
             const body = encodeURIComponent(
-                `Hello Lawrence,\n\nYou have received a new structural design/site tracking project brief.\n\n` +
+                `Hello Lawrence,\n\nYou have received a new structural design project brief.\n\n` +
                 `---------------------------------------------\n` +
                 `Sender Name: ${name}\n` +
                 `Sender Email: ${email}\n` +
