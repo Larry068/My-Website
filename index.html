@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawrence Kiminja | Civil Engineer & Structural Designer</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,6 +23,7 @@
             }
         }
     </script>
+    <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -33,8 +35,10 @@
 </head>
 <body class="bg-[#F8FAFC] text-slate-700 antialiased selection:bg-[#090D16] selection:text-white">
 
+    <!-- Tech Grid Background -->
     <div class="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
+    <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 w-full bg-[#FFFFFF]/80 backdrop-blur-md border-b border-[#E2E8F0] z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div>
@@ -53,6 +57,7 @@
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-[#090D16]"><i class="fa-solid fa-bars text-xl"></i></button>
         </div>
+        <!-- Mobile Nav -->
         <div id="mobile-menu" class="hidden bg-[#FFFFFF] border-b border-[#E2E8F0] p-6 space-y-3">
             <a href="#" class="block text-sm text-slate-600">Home</a>
             <a href="#about" class="block text-sm text-slate-600">About</a>
@@ -63,6 +68,7 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <header class="pt-40 pb-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-16 items-center">
             <div class="md:col-span-7 space-y-6 text-left">
@@ -82,12 +88,14 @@
             </div>
             <div class="md:col-span-5 flex justify-center md:justify-end">
                 <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white p-3 shadow-xl">
-                    <img src="DesignSupervision Projects/WhatsApp Image 2024-07-03 at 1.06.09 PM (1).jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-110">
+                    <!-- Targets image 1 inside structural design folder as profile image -->
+                    <img src="DesignSupervision_Projects/1.jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-110">
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 border-t border-[#E2E8F0] bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
             <div>
@@ -105,6 +113,7 @@
         </div>
     </section>
 
+    <!-- PORTFOLIO CARDS SECTION -->
     <section id="portfolio" class="py-24 border-t border-[#E2E8F0] bg-[#F1F5F9]/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-16">
@@ -114,13 +123,14 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
+                <!-- CARD 1: STRUCTURAL DESIGN PROJECTS (11 Images) -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="structural-design" onclick="rotateStackDeck('structural-design')">
-                        <img src="DesignSupervision Projects/5-bedroom-villa-syokimau (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Villa Syokimau Layout">
-                        <img src="DesignSupervision Projects/5-bedroom-villa-in-meru (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Villa Meru Design">
-                        <img src="DesignSupervision Projects/7-bedroom-syokimau-87 (1).jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Residential Footprint Layout">
-                        <img src="DesignSupervision Projects/commercial-development-along-parliament-road-syokimau-1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Commercial Layout">
-                        <img src="DesignSupervision Projects/kisumu-residence1.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Kisumu Residence">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4 cursor-pointer" 
+                         data-stack-slider="structural-design" 
+                         data-folder="DesignSupervision_Projects" 
+                         data-total="11" 
+                         onclick="rotateStackDeck('structural-design')">
+                         <!-- Dynamically populated by JS engine -->
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
                         <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Design & Supervision</div>
@@ -129,13 +139,14 @@
                     </div>
                 </div>
 
+                <!-- CARD 2: WATER & WASTEWATER INFRASTRUCTURE (38 Images) -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="wastewater" onclick="rotateStackDeck('wastewater')">
-                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.54 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Integrity Audits Base">
-                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.56 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Safety Evaluations">
-                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.57 PM (1).JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="Column Detailing">
-                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.57 PM (2).JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Reinforcement Layout">
-                        <img src="Wastewater_PROJECT/WhatsApp Image 2026-06-23 at 1.42.57 PM.JPG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="Structural Elevation">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4 cursor-pointer" 
+                         data-stack-slider="wastewater" 
+                         data-folder="Wastewater_PROJECT" 
+                         data-total="38" 
+                         onclick="rotateStackDeck('wastewater')">
+                         <!-- Dynamically populated by JS engine -->
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
                         <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Public Utilities</div>
@@ -144,15 +155,14 @@
                     </div>
                 </div>
 
+                <!-- CARD 3: KENYA PIPELINE COMPANY PROJECT (52 Images) -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="kpc" onclick="rotateStackDeck('kpc')">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.23 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="KPC Frame Base">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.22 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Casting Verification">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.19 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]" alt="KPC Site Detail">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.21 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="KPC Reinforcement Grid">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.24 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="KPC Formwork">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.25 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="KPC Structural Casting">
-                        <img src="KPC_PROJECT/WhatsApp Image 2026-06-23 at 1.38.25 PM (1).JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-0 opacity-0" alt="KPC Site Overview">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4 cursor-pointer" 
+                         data-stack-slider="kpc" 
+                         data-folder="KPC_PROJECT" 
+                         data-total="52" 
+                         onclick="rotateStackDeck('kpc')">
+                         <!-- Dynamically populated by JS engine -->
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
                         <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial Scope</div>
@@ -161,10 +171,14 @@
                     </div>
                 </div>
 
+                <!-- CARD 4: NAIROBI EXPRESSWAY SUPERVISION (3 Images) -->
                 <div class="bg-white border border-[#E2E8F0] rounded-2xl p-5 space-y-6 hover:border-slate-300 shadow-sm transition-all flex flex-col justify-between">
-                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4" data-stack-slider="nyoro" onclick="rotateStackDeck('nyoro')">
-                        <img src="NYORO/WhatsApp Image 2026-06-23 at 1.38.26 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-30 opacity-100" alt="Expressway Base Asset">
-                        <img src="NYORO/WhatsApp Image 2026-06-23 at 1.38.35 PM.JPEG" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]" alt="Elevation Profile Context">
+                    <div class="h-60 rounded-xl relative select-none pr-4 pb-4 cursor-pointer" 
+                         data-stack-slider="nyoro" 
+                         data-folder="NYORO" 
+                         data-total="3" 
+                         onclick="rotateStackDeck('nyoro')">
+                         <!-- Dynamically populated by JS engine -->
                     </div>
                     <div class="space-y-2 flex-grow pt-2">
                         <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Civil Infrastructure</div>
@@ -177,6 +191,7 @@
         </div>
     </section>
 
+    <!-- CORE SERVICES -->
     <section id="services" class="py-24 border-t border-[#E2E8F0] bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-2xl font-bold text-[#090D16] mb-12">Engineering Scope Focus</h2>
@@ -200,6 +215,7 @@
         </div>
     </section>
 
+    <!-- DIRECT CONTACT BRIEF FORM -->
     <section id="contact" class="py-24 bg-[#F8FAFC]">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center space-y-2 mb-12">
@@ -234,8 +250,10 @@
         </div>
     </section>
 
+    <!-- INTERACTIVE CONTACT & HIRE MODAL OVERLAY -->
     <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/40 backdrop-blur-md hidden items-center justify-center z-50 px-4 transition-all duration-300">
         <div class="bg-white border border-[#E2E8F0] max-w-md w-full rounded-2xl p-6 sm:p-8 space-y-6 relative shadow-2xl">
+            <!-- Close Button -->
             <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-[#090D16] transition-colors">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
@@ -247,6 +265,7 @@
 
             <hr class="border-[#E2E8F0]">
 
+            <!-- Contact Vectors -->
             <div class="space-y-4">
                 <div class="flex items-start gap-4">
                     <div class="bg-sky-500/10 text-sky-600 p-2.5 rounded-lg text-sm shrink-0 mt-0.5"><i class="fa-solid fa-envelope"></i></div>
@@ -266,6 +285,7 @@
 
             <hr class="border-[#E2E8F0]">
 
+            <!-- HIRE ME ACTIONS -->
             <div class="space-y-3">
                 <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Contract Execution</div>
                 <a href="mailto:kiminja83@gmail.com?subject=Strategic%20Engineering%20Hire%20Engagement&body=Hello%20Lawrence,%0D%0A%0D%0AI%20am%20reaching%20out%20to%20engage%20your%20services%20for%20an%20upcoming%20project.%20Let's%20discuss%20the%20scope%20criteria." 
@@ -280,12 +300,14 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="py-12 border-t border-[#E2E8F0] bg-white text-center text-xs text-slate-400 space-y-3">
         <div class="font-bold text-[#090D16]">Lawrence Kiminja</div>
         <div>Civil Engineering & Structural Design Portfolio</div>
         <div class="text-[10px] text-slate-400">&copy; 2026 Lawrence Kiminja. All Rights Reserved.</div>
     </footer>
 
+    <!-- INTERACTIVE SCRIPTS -->
     <script>
         // Responsive Menu Toggle Logic
         const btn = document.getElementById('mobile-menu-btn');
@@ -293,7 +315,31 @@
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
         menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
 
-        // Comulate-inspired Stack Rotation Engine
+        // High-Performance Dynamic Stack Component Builder
+        document.addEventListener("DOMContentLoaded", () => {
+            const sliders = document.querySelectorAll("[data-stack-slider]");
+            
+            sliders.forEach(container => {
+                const folder = container.dataset.folder;
+                const total = parseInt(container.dataset.total);
+                container.dataset.currentIndex = "0";
+                
+                let htmlContent = "";
+                for (let i = 1; i <= total; i++) {
+                    let layoutClasses = "z-0 opacity-0 translate-x-6 translate-y-4.5 rotate-3 scale-[0.91]";
+                    
+                    // Setup initial stack hierarchy design layers
+                    if (i === 1) layoutClasses = "z-30 opacity-100 translate-x-0 translate-y-0 rotate-0 scale-100";
+                    if (i === 2) layoutClasses = "z-20 opacity-90 translate-x-2 translate-y-1.5 rotate-1 scale-[0.97]";
+                    if (i === 3) layoutClasses = "z-10 opacity-80 translate-x-4 translate-y-3 rotate-2 scale-[0.94]";
+                    
+                    htmlContent += `<img src="${folder}/${i}.jpg" class="card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md ${layoutClasses}" alt="Asset Profile Layer ${i}">`;
+                }
+                container.innerHTML = htmlContent;
+            });
+        });
+
+        // Stack Deck Rotator
         function rotateStackDeck(sliderId) {
             const container = document.querySelector(`[data-stack-slider="${sliderId}"]`);
             if (!container) return;
@@ -306,7 +352,7 @@
 
             images.forEach((img, i) => {
                 let relIndex = (i - currentIndex + images.length) % images.length;
-                img.className = "card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md cursor-pointer";
+                img.className = "card-stack-item absolute inset-0 w-full h-full object-cover rounded-xl shadow-md";
 
                 if (relIndex === 0) {
                     img.classList.add("z-30", "opacity-100", "translate-x-0", "translate-y-0", "rotate-0", "scale-100");
