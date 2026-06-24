@@ -45,4 +45,266 @@
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] bg-[size:32px_32px] opacity-[0.02]"></div>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <div class="md:col-span-7 space-y-6 text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-700 border border-sky-500/20">
+                            <span class="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse"></span> Open for Engineering Scope Consultation
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#090D16] tracking-tight leading-[1.1]">
+                            Hi, I am Lawrence Kiminja.
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
+                            I am a Civil Engineer with over 5 years of local and international experience across multi-sector projects in Building construction, Energy, Roads and Water infrastructure. With progressive engineering experience, I have actively directed project lifecycles, starting my career in Contract Management roles, to Structural design & detailing and comprehensive project and site management roles for public and private sector projects. This has anchored my career in technical and leadership roles, helping to deliver complex projects on time and within budget.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#portfolio" class="bg-[#090D16] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-slate-800 transition-all shadow-md">View Work Portfolio</a>
+                            <button onclick="toggleContactModal(true)" class="bg-transparent text-[#090D16] border border-[#E2E8F0] hover:bg-[#F1F5F9] px-6 py-3 rounded-full text-sm font-bold transition-all">Discuss Brief</button>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 flex justify-center md:justify-end relative">
+                        <div class="absolute -inset-4 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] bg-[size:20px_20px] opacity-[0.04] rounded-3xl pointer-events-none"></div>
+                        
+                        <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white p-3 shadow-xl relative z-10 transition-transform duration-500 hover:scale-[1.02]">
+                            <img src="PROFILE_PHOTO/myprofilephoto.jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-105 brightness-100">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 sm:py-24 border-b border-slate-200/60 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-5 space-y-2">
+                        <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">
+                            Engineered for the Real World
+                        </h2>
+                        <p class="text-sm font-semibold text-sky-600 tracking-wide">
+                            From contract award to the last brick — I've been there
+                        </p>
+                    </div>
+                    
+                    <div class="md:col-span-7 space-y-4 text-slate-600 leading-relaxed">
+                        <blockquote class="border-l-4 border-sky-500 pl-4 italic text-slate-700 font-medium my-4">
+                            "A good Engineer will take any badly run and poorly resourced project and successfully deliver it on time and within budget."
+                        </blockquote>
+                        <p>
+                            Having worked in Construction in various project life cycles, I have tried to live by that inspiration. I have come to learn that a successful construction project is rarely the result of one thing done well. It's a hundred small decisions made correctly, under pressure, by people who know what they're doing.
+                        </p>
+                        <p class="font-medium text-[#090D16]">
+                            Over five years across building multi-sector infrastructure, I've learned to be that person at every stage of delivery, successfully delivering both private and public projects to completion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-16 sm:py-24 bg-[#FAFBFD]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Engineering Projects Portfolio</h2>
+                    <p class="text-sm text-slate-500">Click directly on any image stack to smoothly sweep and reveal the next asset.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer" onclick="cycleStack('design-stack')">
+                            <div id="design-stack-0" class="absolute inset-0 transition-opacity duration-300 opacity-100">
+                                <img src="DesignSupervision_Projects/1.jpg" alt="Residential Structure" class="w-full h-full object-cover">
+                            </div>
+                            <div id="design-stack-1" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="DesignSupervision_Projects/2.jpg" alt="Villa Project Meru" class="w-full h-full object-cover">
+                            </div>
+                            <div id="design-stack-2" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="DesignSupervision_Projects/3.jpg" alt="Syokimau Commercial Development" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-2 flex-grow">
+                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Design & Supervision</span>
+                            <h3 class="text-lg font-bold text-[#090D16]">Residential & Commercial Frameworks</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Structural configuration, sizing calculations, and blueprint configurations matching custom footprints and zoning guidelines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer" onclick="cycleStack('wastewater-stack')">
+                            <div id="wastewater-stack-0" class="absolute inset-0 transition-opacity duration-300 opacity-100">
+                                <img src="Wastewater_PROJECT/1.jpg" alt="Wastewater System" class="w-full h-full object-cover">
+                            </div>
+                            <div id="wastewater-stack-1" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="Wastewater_PROJECT/10.jpg" alt="Infrastructure Detailing" class="w-full h-full object-cover">
+                            </div>
+                            <div id="wastewater-stack-2" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="Wastewater_PROJECT/11.jpg" alt="Site Inspection" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-2 flex-grow">
+                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Wastewater Infrastructure</span>
+                            <h3 class="text-lg font-bold text-[#090D16]">Infrastructure Integrity Appraisals</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Condition modeling, safety load evaluations, and diagnostic layouts analyzing specialized public utility and treatment structures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer" onclick="cycleStack('kpc-stack')">
+                            <div id="kpc-stack-0" class="absolute inset-0 transition-opacity duration-300 opacity-100">
+                                <img src="KPC_PROJECT/1.jpg" alt="KPC Industrial Work" class="w-full h-full object-cover">
+                            </div>
+                            <div id="kpc-stack-1" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="KPC_PROJECT/2.jpg" alt="Reinforcement Pouring" class="w-full h-full object-cover">
+                            </div>
+                            <div id="kpc-stack-2" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="KPC_PROJECT/10.jpg" alt="Industrial Stability Review" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-2 flex-grow">
+                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial Scope</span>
+                            <h3 class="text-lg font-bold text-[#090D16]">KPC Structural Analytics</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                High-load configuration reviews requiring meticulous component assessments and rigorous industrial site stability protocols.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 sm:py-24 bg-white border-t border-b border-slate-200/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Technical Services</h2>
+                    <p class="text-sm text-slate-500">Rigorous, multi-sector engineering workflows deployed to demanding public & private projects.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-calculator text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Structural Analysis</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Advanced structural configurations optimized across specialized layouts to guarantee structural integrity.</p>
+                    </div>
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-file-contract text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Contract Administration</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Comprehensive review pipelines, specification management, and structural execution monitoring protocols.</p>
+                    </div>
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-compass-drafting text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Detailing & Modelling</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">High-fidelity schematic mapping down to exact bar layouts, reinforcement shapes, and spatial parameters.</p>
+                    </div>
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-helmet-safety text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Project Coordination</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">End-to-end execution path monitoring balancing contractor timelines with site safety compliance metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact-section" class="bg-[#090D16] text-white border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-6 space-y-2">
+                    <div class="text-sm font-extrabold tracking-tight">Lawrence Kiminja</div>
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-sky-400">Civil Engineering Portfolio &copy; 2026</div>
+                </div>
+                <div class="md:col-span-6 text-left md:text-right space-y-2 text-xs text-slate-400">
+                    <p>Have an upcoming infrastructure layout, calculation assignment, or coordination audit?</p>
+                    <p class="text-white font-semibold">Direct Email: <a href="mailto:kiminja83@gmail.com" class="text-sky-400 underline hover:text-sky-300">kiminja83@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-2xl w-full max-w-sm border border-[#E2E8F0] p-6 relative shadow-2xl space-y-6">
+            
+            <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="space-y-1">
+                <h3 class="text-lg font-extrabold text-[#090D16] tracking-tight">Engineering Brief Connection</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Direct entry route to connect with Lawrence Kiminja regarding project scope definitions.</p>
+            </div>
+
+            <div class="space-y-4 pt-2">
+                <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Direct Connection</div>
+                <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-4 rounded-xl space-y-3">
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Please reach out directly via email to initiate a technical brief, request a consultation scope, or discuss project requirements.
+                    </p>
+                    <a href="mailto:kiminja83@gmail.com" class="block text-center bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-xs py-3 rounded-lg transition-all shadow-md">
+                        <i class="fa-solid fa-envelope mr-2"></i> Email: kiminja83@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-[9px] text-center text-slate-400 font-medium tracking-wide">
+                Registered Professional Engineer • PMP Certified
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Track indices for different portfolio stack galleries
+        const stackStates = {
+            'design-stack': { current: 0, total: 3 },
+            'wastewater-stack': { current: 0, total: 3 },
+            'kpc-stack': { current: 0, total: 3 }
+        };
+
+        // Smoothly cycle stack configurations to reveal the next asset card element
+        function cycleStack(stackId) {
+            const state = stackStates[stackId];
+            const oldIndex = state.current;
+            const newIndex = (state.current + 1) % state.total;
+            
+            const oldEl = document.getElementById(`${stackId}-${oldIndex}`);
+            const newEl = document.getElementById(`${stackId}-${newIndex}`);
+            
+            if (oldEl && newEl) {
+                oldEl.classList.replace('opacity-100', 'opacity-0');
+                newEl.classList.replace('opacity-0', 'opacity-100');
+                state.current = newIndex;
+            }
+        }
+
+        // Toggle visibility state for contact bridge coordinates overlay modal
+        function toggleContactModal(show) {
+            const modal = document.getElementById('contact-modal');
+            if (!modal) return;
+            
+            if (show) {
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                modal.classList.add('opacity-100');
+            } else {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('pointer-events-none', 'opacity-0');
+            }
+        }
+
+        // Close overlay frame automatically if clicking outside modal border box scope
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('contact-modal');
+            if (e.target === modal) {
+                toggleContactModal(false);
+            }
+        });
+    </script>
+
+</body>
+</html>
