@@ -27,7 +27,7 @@
                 <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
                 <a href="#portfolio" class="hover:text-slate-900 transition-colors">Portfolio</a>
                 <a href="#services" class="hover:text-slate-900 transition-colors">Services</a>
-                <a href="#contact-section" class="hover:text-slate-900 transition-colors">Contact Brief</a>
+                <a href="#contact-section" class="hover:text-slate-900 transition-colors">Contact</a>
             </div>
             <div>
                 <button onclick="toggleContactModal(true)" class="bg-[#090D16] hover:bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-full transition-all">
@@ -59,7 +59,7 @@
                         </p>
                         <div class="flex flex-wrap gap-4 pt-2">
                             <a href="#portfolio" class="bg-[#090D16] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-slate-800 transition-all shadow-md">View Work Portfolio</a>
-                            <button onclick="toggleContactModal(true)" class="bg-transparent text-[#090D16] border border-[#E2E8F0] hover:bg-[#F1F5F9] px-6 py-3 rounded-full text-sm font-bold transition-all">Discuss Brief</button>
+                            <a href="#contact-section" class="bg-transparent text-[#090D16] border border-[#E2E8F0] hover:bg-[#F1F5F9] px-6 py-3 rounded-full text-sm font-bold transition-all text-center">Discuss Brief</a>
                         </div>
                     </div>
 
@@ -107,7 +107,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
                 <div class="space-y-2">
                     <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Engineering Projects Portfolio</h2>
-                    <p class="text-sm text-slate-500">Click directly on any image stack to smoothly sweep and reveal the next asset.</p>
+                    <p class="text-sm text-slate-500">Click on an image stack to reveal the next asset. Click on the text details below it to enlarge the active view.</p>
                 </div>
 
                 <!-- 4-Column Balanced Grid Layout -->
@@ -115,6 +115,7 @@
                     
                     <!-- Card 1: Design & Supervision -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <!-- Green X Area: Image Stack -->
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('design')">
                             <img id="design-img-primary" src="DesignSupervision_Projects/1.jpg" alt="Structural Design" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
                             <img id="design-img-secondary" src="DesignSupervision_Projects/2.jpg" alt="Structural Design Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
@@ -122,15 +123,17 @@
                                 <span id="design-counter">1</span>/11
                             </div>
                         </div>
-                        <div class="space-y-2 flex-grow">
+                        <!-- Blue X Area: Details Container for Pop Up Lightbox -->
+                        <div class="space-y-2 flex-grow cursor-pointer group" onclick="openLightbox('design')">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Design & Supervision</span>
-                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">Structural Design Projects - Design & Detailing</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2 group-hover:text-sky-600 transition-colors">Structural Design Projects - Design & Detailing</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">Structural configuration, sizing calculations, and blueprint configurations matching custom zoning guidelines.</p>
                         </div>
                     </div>
 
                     <!-- Card 2: Wastewater Infrastructure -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <!-- Green X Area: Image Stack -->
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('wastewater')">
                             <img id="wastewater-img-primary" src="Wastewater_PROJECT/1.jpg" alt="Water Infrastructure" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
                             <img id="wastewater-img-secondary" src="Wastewater_PROJECT/2.jpg" alt="Water Infrastructure Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
@@ -138,15 +141,17 @@
                                 <span id="wastewater-counter">1</span>/18
                             </div>
                         </div>
-                        <div class="space-y-2 flex-grow">
+                        <!-- Blue X Area: Details Container for Pop Up Lightbox -->
+                        <div class="space-y-2 flex-grow cursor-pointer group" onclick="openLightbox('wastewater')">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Wastewater</span>
-                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">Water Infrastructure Condition Assessments & Wastewater treatment Infrastructure Construction - Botswana</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2 group-hover:text-sky-600 transition-colors">Water Infrastructure Condition Assessments & Wastewater treatment Infrastructure Construction - Botswana</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">Condition modeling, safety load evaluations, and diagnostic layouts analyzing public utility structures.</p>
                         </div>
                     </div>
 
                     <!-- Card 3: Nyoro Project -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <!-- Green X Area: Image Stack -->
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('nyoro')">
                             <img id="nyoro-img-primary" src="NYORO/1.jpg" alt="Road Projects" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
                             <img id="nyoro-img-secondary" src="NYORO/2.jpg" alt="Road Projects Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
@@ -154,15 +159,17 @@
                                 <span id="nyoro-counter">1</span>/3
                             </div>
                         </div>
-                        <div class="space-y-2 flex-grow">
+                        <!-- Blue X Area: Details Container for Pop Up Lightbox -->
+                        <div class="space-y-2 flex-grow cursor-pointer group" onclick="openLightbox('nyoro')">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Civil Infrastructure</span>
-                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">Road Projects & Contract Management</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2 group-hover:text-sky-600 transition-colors">Road Projects & Contract Management</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">Civil execution tracking, ground progress surveys, and targeted design coordination workflows.</p>
                         </div>
                     </div>
 
                     <!-- Card 4: KPC Structural Analytics -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <!-- Green X Area: Image Stack -->
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('kpc')">
                             <img id="kpc-img-primary" src="KPC_PROJECT/1.jpg" alt="KPC Infrastructure" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
                             <img id="kpc-img-secondary" src="KPC_PROJECT/2.jpg" alt="KPC Infrastructure Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
@@ -170,9 +177,10 @@
                                 <span id="kpc-counter">1</span>/52
                             </div>
                         </div>
-                        <div class="space-y-2 flex-grow">
+                        <!-- Blue X Area: Details Container for Pop Up Lightbox -->
+                        <div class="space-y-2 flex-grow cursor-pointer group" onclick="openLightbox('kpc')">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial Scope</span>
-                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">KPC Structural Analytics</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2 group-hover:text-sky-600 transition-colors">Kenya Pipeline Company - Fuel Loading Facility</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">High-load configuration reviews requiring meticulous component assessments and stability protocols.</p>
                         </div>
                     </div>
@@ -213,10 +221,61 @@
             </div>
         </section>
 
+        <!-- COMPREHENSIVE CONTACT ME FORM SECTION -->
+        <section id="contact-section" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Contact Me Direct Form</h2>
+                    <p class="text-sm text-slate-500 max-w-lg mx-auto">Have an upcoming infrastructure layout, calculation assignment, or coordination audit? Get in touch immediately.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+                    <!-- Form Block -->
+                    <form action="https://formspree.io/f/xoqgkyne" method="POST" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1" for="name">Your Name</label>
+                                <input type="text" name="name" id="name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-sky-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1" for="email">Email Address</label>
+                                <input type="email" name="email" id="email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-sky-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1" for="subject">Project Subject / Scope</label>
+                            <input type="text" name="subject" id="subject" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-sky-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1" for="message">Message Brief</label>
+                            <textarea name="message" id="message" rows="4" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-sky-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-sm py-3 rounded-lg transition-all shadow-sm">
+                            Submit Project Brief
+                        </button>
+                    </form>
+
+                    <div class="border-t border-slate-100 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div class="space-y-1">
+                            <span class="font-bold text-slate-400 uppercase tracking-widest block text-[10px]">Direct Phone Contacts</span>
+                            <p class="text-slate-700 font-medium"><i class="fa-solid fa-phone mr-1.5 text-sky-600"></i>+254 702235068 (Kenya)</p>
+                            <p class="text-slate-700 font-medium"><i class="fa-solid fa-phone mr-1.5 text-sky-600"></i>+267 76638164 (Botswana)</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="font-bold text-slate-400 uppercase tracking-widest block text-[10px]">Direct Email Workspace</span>
+                            <a href="mailto:kiminja83@gmail.com" class="text-sky-600 font-semibold underline hover:text-sky-700 block break-all">
+                                <i class="fa-solid fa-envelope mr-1.5"></i>kiminja83@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
-    <footer id="contact-section" class="bg-[#090D16] text-white border-t border-slate-800 py-12">
+    <footer class="bg-[#090D16] text-white border-t border-slate-800 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <div class="md:col-span-6 space-y-2">
@@ -224,34 +283,56 @@
                     <div class="text-[10px] uppercase font-bold tracking-widest text-sky-400">Civil Engineering Portfolio &copy; 2026</div>
                 </div>
                 <div class="md:col-span-6 text-left md:text-right space-y-2 text-xs text-slate-400">
-                    <p>Have an upcoming infrastructure layout, calculation assignment, or coordination audit?</p>
-                    <p class="text-white font-semibold">Direct Email: <a href="mailto:kiminja83@gmail.com" class="text-sky-400 underline hover:text-sky-300">kiminja83@gmail.com</a></p>
+                    <p>Registered Professional Engineer • PMP Certified</p>
+                    <p class="text-white font-semibold">Direct Channel: <a href="mailto:kiminja83@gmail.com" class="text-sky-400 underline hover:text-sky-300">kiminja83@gmail.com</a></p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- INTERACTIVE CONTACT MODAL -->
+    <!-- INTERACTIVE LIGHTBOX POPUP MODAL (ENLARGE BLUE X AREA) -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-[#090D16]/90 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeLightbox()">
+        <div class="relative max-w-4xl max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-sky-400 transition-colors text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-target-img" src="" alt="Enlarged Project View" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10">
+            <p id="lightbox-caption" class="text-white/80 text-xs font-semibold mt-4 bg-black/40 px-4 py-1.5 rounded-full tracking-wide"></p>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE CONTACT ME FORM MODAL -->
     <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-white rounded-2xl w-full max-w-sm border border-[#E2E8F0] p-6 relative shadow-2xl space-y-6">
+        <div class="bg-white rounded-2xl w-full max-w-md border border-[#E2E8F0] p-6 relative shadow-2xl space-y-4">
             <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
             <div class="space-y-1">
-                <h3 class="text-lg font-extrabold text-[#090D16] tracking-tight">Engineering Brief Connection</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">Direct entry route to connect with Lawrence Kiminja regarding project scope definitions.</p>
+                <h3 class="text-lg font-extrabold text-[#090D16] tracking-tight">Direct Project Connection</h3>
+                <p class="text-xs text-slate-500">Submit your technical brief directly into my workspace inbox.</p>
             </div>
-            <div class="space-y-4 pt-2">
-                <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Direct Connection</div>
-                <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-4 rounded-xl space-y-3">
-                    <p class="text-xs text-slate-600 leading-relaxed">Please reach out directly via email to initiate a technical brief, request a consultation scope, or discuss project requirements.</p>
-                    <a href="mailto:kiminja83@gmail.com" class="block text-center bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-xs py-3 rounded-lg transition-all shadow-md">
-                        <i class="fa-solid fa-envelope mr-2"></i> Email: kiminja83@gmail.com
-                    </a>
+            
+            <form action="https://formspree.io/f/xoqgkyne" method="POST" class="space-y-3 pt-2">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-0.5" for="modal-name">Your Name</label>
+                    <input type="text" name="name" id="modal-name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:border-sky-500">
                 </div>
-            </div>
-            <div class="text-[9px] text-center text-slate-400 font-medium tracking-wide">
-                Registered Professional Engineer • PMP Certified
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-0.5" for="modal-email">Email Address</label>
+                    <input type="email" name="email" id="modal-email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:border-sky-500">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-0.5" for="modal-message">Message Brief</label>
+                    <textarea name="message" id="modal-message" rows="3" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:border-sky-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#090D16] hover:bg-slate-800 text-white font-bold text-xs py-2.5 rounded-lg transition-all shadow-md">
+                    Send Message
+                </button>
+            </form>
+
+            <div class="text-[10px] text-slate-500 bg-slate-50 p-2.5 rounded-xl border border-slate-100 space-y-1">
+                <p><strong>Tel (KE):</strong> +254 702235068 | <strong>Tel (BW):</strong> +267 76638164</p>
+                <p><strong>Email:</strong> kiminja83@gmail.com</p>
             </div>
         </div>
     </div>
@@ -260,10 +341,10 @@
     <script>
         // Synchronized precisely to local asset configuration maps
         const galleryConfig = {
-            design: { base: 'DesignSupervision_Projects', max: 11, current: 1 },
-            wastewater: { base: 'Wastewater_PROJECT', max: 18, current: 1 },
-            nyoro: { base: 'NYORO', max: 3, current: 1 },
-            kpc: { base: 'KPC_PROJECT', max: 52, current: 1 }
+            design: { base: 'DesignSupervision_Projects', max: 11, current: 1, title: 'Structural Design Projects - Design & Detailing' },
+            wastewater: { base: 'Wastewater_PROJECT', max: 18, current: 1, title: 'Water Infrastructure Condition Assessments & Wastewater Infrastructure Construction' },
+            nyoro: { base: 'NYORO', max: 3, current: 1, title: 'Road Projects & Contract Management' },
+            kpc: { base: 'KPC_PROJECT', max: 52, current: 1, title: 'Kenya Pipeline Company - Fuel Loading Facility' }
         };
 
         let isTransitioning = false;
@@ -305,6 +386,31 @@
                 isTransitioning = false;
                 cycleDynamicStack(key);
             };
+        }
+
+        // ENLARGE POP UP LIGHTBOX WINDOW (BLUE X AREA ACTION)
+        function openLightbox(key) {
+            const cfg = galleryConfig[key];
+            const modal = document.getElementById('lightbox-modal');
+            const targetImg = document.getElementById('lightbox-target-img');
+            const caption = document.getElementById('lightbox-caption');
+
+            if (!modal || !targetImg || !caption) return;
+
+            // Inject current loaded index file path coordinates dynamically
+            targetImg.src = `${cfg.base}/${cfg.current}.jpg`;
+            caption.textContent = `${cfg.title} (Asset ${cfg.current} of ${cfg.max})`;
+
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.classList.add('opacity-100');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            if (modal) {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('pointer-events-none', 'opacity-0');
+            }
         }
 
         function toggleContactModal(show) {
