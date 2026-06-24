@@ -9,20 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-[#FAFBFD] text-slate-900 min-h-screen flex flex-col antialiased selection:bg-sky-500/20">
+<body class="bg-[#FAFBFD] text-slate-900 min-h-screen flex flex-col antialiased">
 
-    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200/80 z-40 navbar-animate">
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200/80 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex flex-col">
                 <span class="font-extrabold text-sm tracking-tight text-[#090D16]">Lawrence Kiminja</span>
                 <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 -mt-0.5">Civil Engineering & Design</span>
             </div>
-            
             <div class="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-600">
                 <a href="#" class="hover:text-slate-900 transition-colors">Home</a>
                 <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
@@ -30,17 +29,18 @@
                 <a href="#services" class="hover:text-slate-900 transition-colors">Services</a>
                 <a href="#contact-section" class="hover:text-slate-900 transition-colors">Contact Brief</a>
             </div>
-            
             <div>
-                <button onclick="toggleContactModal(true)" class="bg-[#090D16] hover:bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-full transition-all shadow-sm">
+                <button onclick="toggleContactModal(true)" class="bg-[#090D16] hover:bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-full transition-all">
                     Get In Touch
                 </button>
             </div>
         </div>
     </nav>
 
+    <!-- MAIN BODY CONTENT -->
     <main class="flex-grow pt-16">
 
+        <!-- HERO SECTION -->
         <section class="relative bg-white border-b border-slate-200/60 overflow-hidden py-16 sm:py-24 lg:py-32">
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] bg-[size:32px_32px] opacity-[0.02]"></div>
             
@@ -65,7 +65,6 @@
 
                     <div class="md:col-span-5 flex justify-center md:justify-end relative">
                         <div class="absolute -inset-4 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] bg-[size:20px_20px] opacity-[0.04] rounded-3xl pointer-events-none"></div>
-                        
                         <div class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white p-3 shadow-xl relative z-10 transition-transform duration-500 hover:scale-[1.02]">
                             <img src="PROFILE_PHOTO/myprofilephoto.jpg" alt="Lawrence Kiminja" class="w-full h-full object-cover rounded-xl filter contrast-105 brightness-100">
                         </div>
@@ -75,6 +74,7 @@
             </div>
         </section>
 
+        <!-- VISION / APPROACH SECTION -->
         <section id="about" class="py-16 sm:py-24 border-b border-slate-200/60 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -102,9 +102,9 @@
             </div>
         </section>
 
+        <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="py-16 sm:py-24 bg-[#FAFBFD]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-                
                 <div class="space-y-2">
                     <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Engineering Projects Portfolio</h2>
                     <p class="text-sm text-slate-500">Click directly on any image stack to smoothly sweep and reveal the next asset.</p>
@@ -112,6 +112,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
+                    <!-- Card 1: Design & Supervision Stack -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer" onclick="cycleStack('design-stack')">
                             <div id="design-stack-0" class="absolute inset-0 transition-opacity duration-300 opacity-100">
@@ -127,12 +128,11 @@
                         <div class="space-y-2 flex-grow">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Design & Supervision</span>
                             <h3 class="text-lg font-bold text-[#090D16]">Residential & Commercial Frameworks</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Structural configuration, sizing calculations, and blueprint configurations matching custom footprints and zoning guidelines.
-                            </p>
+                            <p class="text-xs text-slate-600 leading-relaxed">Structural configuration, sizing calculations, and blueprint configurations matching custom footprints and zoning guidelines.</p>
                         </div>
                     </div>
 
+                    <!-- Card 2: Wastewater Infrastructure Stack -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer" onclick="cycleStack('wastewater-stack')">
                             <div id="wastewater-stack-0" class="absolute inset-0 transition-opacity duration-300 opacity-100">
@@ -144,16 +144,21 @@
                             <div id="wastewater-stack-2" class="absolute inset-0 transition-opacity duration-300 opacity-0">
                                 <img src="Wastewater_PROJECT/11.jpg" alt="Site Inspection" class="w-full h-full object-cover">
                             </div>
+                            <div id="wastewater-stack-3" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="Wastewater_PROJECT/12.jpg" alt="Concrete Reinforcement" class="w-full h-full object-cover">
+                            </div>
+                            <div id="wastewater-stack-4" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="Wastewater_PROJECT/13.jpg" alt="Slab Base Structural Check" class="w-full h-full object-cover">
+                            </div>
                         </div>
                         <div class="space-y-2 flex-grow">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Wastewater Infrastructure</span>
                             <h3 class="text-lg font-bold text-[#090D16]">Infrastructure Integrity Appraisals</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                Condition modeling, safety load evaluations, and diagnostic layouts analyzing specialized public utility and treatment structures.
-                            </p>
+                            <p class="text-xs text-slate-600 leading-relaxed">Condition modeling, safety load evaluations, and diagnostic layouts analyzing specialized public utility and treatment structures.</p>
                         </div>
                     </div>
 
+                    <!-- Card 3: KPC Structural Analytics Stack -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer" onclick="cycleStack('kpc-stack')">
                             <div id="kpc-stack-0" class="absolute inset-0 transition-opacity duration-300 opacity-100">
@@ -165,13 +170,14 @@
                             <div id="kpc-stack-2" class="absolute inset-0 transition-opacity duration-300 opacity-0">
                                 <img src="KPC_PROJECT/10.jpg" alt="Industrial Stability Review" class="w-full h-full object-cover">
                             </div>
+                            <div id="kpc-stack-3" class="absolute inset-0 transition-opacity duration-300 opacity-0">
+                                <img src="KPC_PROJECT/11.jpg" alt="Structural Frame Detailing" class="w-full h-full object-cover">
+                            </div>
                         </div>
                         <div class="space-y-2 flex-grow">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial Scope</span>
                             <h3 class="text-lg font-bold text-[#090D16]">KPC Structural Analytics</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                High-load configuration reviews requiring meticulous component assessments and rigorous industrial site stability protocols.
-                            </p>
+                            <p class="text-xs text-slate-600 leading-relaxed">High-load configuration reviews requiring meticulous component assessments and rigorous industrial site stability protocols.</p>
                         </div>
                     </div>
 
@@ -179,13 +185,13 @@
             </div>
         </section>
 
+        <!-- SERVICES SECTION -->
         <section id="services" class="py-16 sm:py-24 bg-white border-t border-b border-slate-200/60">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
                 <div class="space-y-2">
                     <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Technical Services</h2>
                     <p class="text-sm text-slate-500">Rigorous, multi-sector engineering workflows deployed to demanding public & private projects.</p>
                 </div>
-                
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
                         <i class="fa-solid fa-calculator text-sky-600 text-xl"></i>
@@ -213,6 +219,7 @@
 
     </main>
 
+    <!-- FOOTER -->
     <footer id="contact-section" class="bg-[#090D16] text-white border-t border-slate-800 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -228,46 +235,39 @@
         </div>
     </footer>
 
+    <!-- INTERACTIVE CONTACT MODAL -->
     <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white rounded-2xl w-full max-w-sm border border-[#E2E8F0] p-6 relative shadow-2xl space-y-6">
-            
             <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-
             <div class="space-y-1">
                 <h3 class="text-lg font-extrabold text-[#090D16] tracking-tight">Engineering Brief Connection</h3>
                 <p class="text-xs text-slate-500 leading-relaxed">Direct entry route to connect with Lawrence Kiminja regarding project scope definitions.</p>
             </div>
-
             <div class="space-y-4 pt-2">
                 <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Direct Connection</div>
                 <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-4 rounded-xl space-y-3">
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Please reach out directly via email to initiate a technical brief, request a consultation scope, or discuss project requirements.
-                    </p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Please reach out directly via email to initiate a technical brief, request a consultation scope, or discuss project requirements.</p>
                     <a href="mailto:kiminja83@gmail.com" class="block text-center bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-xs py-3 rounded-lg transition-all shadow-md">
                         <i class="fa-solid fa-envelope mr-2"></i> Email: kiminja83@gmail.com
                     </a>
                 </div>
             </div>
-
             <div class="text-[9px] text-center text-slate-400 font-medium tracking-wide">
                 Registered Professional Engineer • PMP Certified
             </div>
-
         </div>
     </div>
 
+    <!-- JAVASCRIPT LAYER -->
     <script>
-        // Track indices for different portfolio stack galleries
         const stackStates = {
             'design-stack': { current: 0, total: 3 },
-            'wastewater-stack': { current: 0, total: 3 },
-            'kpc-stack': { current: 0, total: 3 }
+            'wastewater-stack': { current: 0, total: 5 },
+            'kpc-stack': { current: 0, total: 4 }
         };
 
-        // Smoothly cycle stack configurations to reveal the next asset card element
         function cycleStack(stackId) {
             const state = stackStates[stackId];
             const oldIndex = state.current;
@@ -283,11 +283,9 @@
             }
         }
 
-        // Toggle visibility state for contact bridge coordinates overlay modal
         function toggleContactModal(show) {
             const modal = document.getElementById('contact-modal');
             if (!modal) return;
-            
             if (show) {
                 modal.classList.remove('pointer-events-none', 'opacity-0');
                 modal.classList.add('opacity-100');
@@ -297,7 +295,6 @@
             }
         }
 
-        // Close overlay frame automatically if clicking outside modal border box scope
         window.addEventListener('click', function(e) {
             const modal = document.getElementById('contact-modal');
             if (e.target === modal) {
@@ -305,6 +302,5 @@
             }
         });
     </script>
-
 </body>
 </html>
