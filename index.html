@@ -15,6 +15,7 @@
 </head>
 <body class="bg-[#FAFBFD] text-slate-900 min-h-screen flex flex-col antialiased">
 
+    <!-- NAVIGATION -->
     <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-slate-200/80 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex flex-col">
@@ -36,8 +37,10 @@
         </div>
     </nav>
 
+    <!-- MAIN BODY CONTENT -->
     <main class="flex-grow pt-16">
 
+        <!-- HERO SECTION -->
         <section class="relative bg-white border-b border-slate-200/60 overflow-hidden py-16 sm:py-24 lg:py-32">
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#0284c7_1px,transparent_1px),linear-gradient(to_bottom,#0284c7_1px,transparent_1px)] bg-[size:32px_32px] opacity-[0.02]"></div>
             
@@ -71,6 +74,7 @@
             </div>
         </section>
 
+        <!-- VISION / APPROACH SECTION -->
         <section id="about" class="py-16 sm:py-24 border-b border-slate-200/60 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -98,6 +102,7 @@
             </div>
         </section>
 
+        <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="py-16 sm:py-24 bg-[#FAFBFD]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
                 <div class="space-y-2">
@@ -105,48 +110,221 @@
                     <p class="text-sm text-slate-500">Click directly on any image stack to smoothly sweep and reveal the next asset.</p>
                 </div>
 
+                <!-- 4-Column Balanced Grid Layout -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     
+                    <!-- Card 1: Design & Supervision -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('design')">
-                            <img id="design-img-primary" src="DesignSupervision_Projects/1.jpg" alt="Residential Structure" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
-                            <img id="design-img-secondary" src="DesignSupervision_Projects/2.jpg" alt="Residential Structure Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
+                            <img id="design-img-primary" src="DesignSupervision_Projects/1.jpg" alt="Structural Design" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
+                            <img id="design-img-secondary" src="DesignSupervision_Projects/2.jpg" alt="Structural Design Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
                             <div class="absolute bottom-3 right-3 bg-black/60 text-white font-bold text-[10px] px-2 py-0.5 rounded-full tracking-wider opacity-60 group-hover:opacity-100 transition-opacity">
                                 <span id="design-counter">1</span>/11
                             </div>
                         </div>
                         <div class="space-y-2 flex-grow">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Design & Supervision</span>
-                            <h3 class="text-base font-bold text-[#090D16] line-clamp-1">Residential Frameworks</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">Structural Design Projects - Design & Detailing</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">Structural configuration, sizing calculations, and blueprint configurations matching custom zoning guidelines.</p>
                         </div>
                     </div>
 
+                    <!-- Card 2: Wastewater Infrastructure -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('wastewater')">
-                            <img id="wastewater-img-primary" src="Wastewater_PROJECT/1.jpg" alt="Wastewater System" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
-                            <img id="wastewater-img-secondary" src="Wastewater_PROJECT/2.jpg" alt="Wastewater System Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
+                            <img id="wastewater-img-primary" src="Wastewater_PROJECT/1.jpg" alt="Water Infrastructure" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
+                            <img id="wastewater-img-secondary" src="Wastewater_PROJECT/2.jpg" alt="Water Infrastructure Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
                             <div class="absolute bottom-3 right-3 bg-black/60 text-white font-bold text-[10px] px-2 py-0.5 rounded-full tracking-wider opacity-60 group-hover:opacity-100 transition-opacity">
                                 <span id="wastewater-counter">1</span>/18
                             </div>
                         </div>
                         <div class="space-y-2 flex-grow">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Wastewater</span>
-                            <h3 class="text-base font-bold text-[#090D16] line-clamp-1">Infrastructure Appraisals</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">Water Infrastructure Condition Assessments & Wastewater treatment Infrastructure Construction - Botswana</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">Condition modeling, safety load evaluations, and diagnostic layouts analyzing public utility structures.</p>
                         </div>
                     </div>
 
+                    <!-- Card 3: Nyoro Project -->
                     <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
                         <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('nyoro')">
-                            <img id="nyoro-img-primary" src="NYORO/1.jpg" alt="Nyoro Civil Works" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
-                            <img id="nyoro-img-secondary" src="NYORO/2.jpg" alt="Nyoro Civil Works Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
+                            <img id="nyoro-img-primary" src="NYORO/1.jpg" alt="Road Projects" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
+                            <img id="nyoro-img-secondary" src="NYORO/2.jpg" alt="Road Projects Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
                             <div class="absolute bottom-3 right-3 bg-black/60 text-white font-bold text-[10px] px-2 py-0.5 rounded-full tracking-wider opacity-60 group-hover:opacity-100 transition-opacity">
                                 <span id="nyoro-counter">1</span>/3
                             </div>
                         </div>
                         <div class="space-y-2 flex-grow">
                             <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Civil Infrastructure</span>
-                            <h3 class="text-base font-bold text-[#090D16] line-clamp-1">Nyoro Engineering Scope</h3>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">Road Projects & Contract Management</h3>
                             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">Civil execution tracking, ground progress surveys, and targeted design coordination workflows.</p>
                         </div>
+                    </div>
+
+                    <!-- Card 4: KPC Structural Analytics -->
+                    <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm flex flex-col space-y-4">
+                        <div class="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-slate-100 select-none group" onclick="cycleDynamicStack('kpc')">
+                            <img id="kpc-img-primary" src="KPC_PROJECT/1.jpg" alt="KPC Infrastructure" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100">
+                            <img id="kpc-img-secondary" src="KPC_PROJECT/2.jpg" alt="KPC Infrastructure Overlay" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0">
+                            <div class="absolute bottom-3 right-3 bg-black/60 text-white font-bold text-[10px] px-2 py-0.5 rounded-full tracking-wider opacity-60 group-hover:opacity-100 transition-opacity">
+                                <span id="kpc-counter">1</span>/52
+                            </div>
+                        </div>
+                        <div class="space-y-2 flex-grow">
+                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-widest">Industrial Scope</span>
+                            <h3 class="text-base font-bold text-[#090D16] tracking-tight line-clamp-2">KPC Structural Analytics</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">High-load configuration reviews requiring meticulous component assessments and stability protocols.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-16 sm:py-24 bg-white border-t border-b border-slate-200/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-extrabold text-[#090D16] tracking-tight">Technical Services</h2>
+                    <p class="text-sm text-slate-500">Rigorous, multi-sector engineering workflows deployed to demanding public & private projects.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-calculator text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Structural Analysis</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Advanced structural configurations optimized across specialized layouts to guarantee structural integrity.</p>
+                    </div>
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-file-contract text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Contract Administration</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Comprehensive review pipelines, specification management, and structural execution monitoring protocols.</p>
+                    </div>
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-compass-drafting text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Detailing & Modelling</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">High-fidelity schematic mapping down to exact bar layouts, reinforcement shapes, and spatial parameters.</p>
+                    </div>
+                    <div class="border border-slate-200 p-6 rounded-xl space-y-3 bg-[#FAFBFD]">
+                        <i class="fa-solid fa-helmet-safety text-sky-600 text-xl"></i>
+                        <h4 class="font-bold text-sm text-[#090D16]">Project Coordination</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">End-to-end execution path monitoring balancing contractor timelines with site safety compliance metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact-section" class="bg-[#090D16] text-white border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-6 space-y-2">
+                    <div class="text-sm font-extrabold tracking-tight">Lawrence Kiminja</div>
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-sky-400">Civil Engineering Portfolio &copy; 2026</div>
+                </div>
+                <div class="md:col-span-6 text-left md:text-right space-y-2 text-xs text-slate-400">
+                    <p>Have an upcoming infrastructure layout, calculation assignment, or coordination audit?</p>
+                    <p class="text-white font-semibold">Direct Email: <a href="mailto:kiminja83@gmail.com" class="text-sky-400 underline hover:text-sky-300">kiminja83@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE CONTACT MODAL -->
+    <div id="contact-modal" class="fixed inset-0 bg-[#090D16]/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-2xl w-full max-w-sm border border-[#E2E8F0] p-6 relative shadow-2xl space-y-6">
+            <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="space-y-1">
+                <h3 class="text-lg font-extrabold text-[#090D16] tracking-tight">Engineering Brief Connection</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">Direct entry route to connect with Lawrence Kiminja regarding project scope definitions.</p>
+            </div>
+            <div class="space-y-4 pt-2">
+                <div class="text-[10px] font-bold text-sky-600 uppercase tracking-widest block mb-1">Direct Connection</div>
+                <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-4 rounded-xl space-y-3">
+                    <p class="text-xs text-slate-600 leading-relaxed">Please reach out directly via email to initiate a technical brief, request a consultation scope, or discuss project requirements.</p>
+                    <a href="mailto:kiminja83@gmail.com" class="block text-center bg-[#090D16] hover:bg-slate-800 text-white font-extrabold text-xs py-3 rounded-lg transition-all shadow-md">
+                        <i class="fa-solid fa-envelope mr-2"></i> Email: kiminja83@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="text-[9px] text-center text-slate-400 font-medium tracking-wide">
+                Registered Professional Engineer • PMP Certified
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LAYER -->
+    <script>
+        // Synchronized precisely to local asset configuration maps
+        const galleryConfig = {
+            design: { base: 'DesignSupervision_Projects', max: 11, current: 1 },
+            wastewater: { base: 'Wastewater_PROJECT', max: 18, current: 1 },
+            nyoro: { base: 'NYORO', max: 3, current: 1 },
+            kpc: { base: 'KPC_PROJECT', max: 52, current: 1 }
+        };
+
+        let isTransitioning = false;
+
+        function cycleDynamicStack(key) {
+            if (isTransitioning) return;
+            
+            const cfg = galleryConfig[key];
+            const nextIdx = (cfg.current % cfg.max) + 1;
+            
+            const primaryImg = document.getElementById(`${key}-img-primary`);
+            const secondaryImg = document.getElementById(`${key}-img-secondary`);
+            const counterEl = document.getElementById(`${key}-counter`);
+            
+            if (!primaryImg || !secondaryImg) return;
+            isTransitioning = true;
+
+            // Preload step on hidden layer
+            secondaryImg.src = `${cfg.base}/${nextIdx}.jpg`;
+
+            secondaryImg.onload = function() {
+                // Crossfade animation block inspired by commulate.com
+                primaryImg.classList.replace('opacity-100', 'opacity-0');
+                secondaryImg.classList.replace('opacity-0', 'opacity-100');
+
+                setTimeout(() => {
+                    primaryImg.src = secondaryImg.src;
+                    primaryImg.classList.replace('opacity-0', 'opacity-100');
+                    secondaryImg.classList.replace('opacity-100', 'opacity-0');
+                    
+                    cfg.current = nextIdx;
+                    if (counterEl) counterEl.textContent = cfg.current;
+                    isTransitioning = false;
+                }, 310);
+            };
+
+            secondaryImg.onerror = function() {
+                cfg.current = nextIdx;
+                isTransitioning = false;
+                cycleDynamicStack(key);
+            };
+        }
+
+        function toggleContactModal(show) {
+            const modal = document.getElementById('contact-modal');
+            if (!modal) return;
+            if (show) {
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                modal.classList.add('opacity-100');
+            } else {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('pointer-events-none', 'opacity-0');
+            }
+        }
+
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('contact-modal');
+            if (e.target === modal) {
+                toggleContactModal(false);
+            }
+        });
+    </script>
+</body>
+</html>
